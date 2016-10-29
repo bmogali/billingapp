@@ -1,0 +1,134 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <title>Cool Touch</title>
+    <!--[if lt IE 9]>
+    <script src="js/html5.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="styles/print-bootstrap.css" />
+    <link rel="stylesheet" href="styles/print-bootstrap-theme.css" />
+    <link rel="stylesheet" href="styles/print.css" />
+</head>
+<body>
+    <div class="mainouterbox">
+        <div class="container-fluid">
+            <form method="post" action="">
+                <header class="container-fluid">
+                    <div class="logodcbox"><img src="images/dc-logo.jpg" alt="" /></div>
+                    <div class="formtitlebox">
+                        <hgroup>
+                            <h2>Derma Laser Centers</h2>
+                            <h3>Patient Treatment Log</h3>
+                        </hgroup>
+                    </div>
+                    <div class="rightlogobox"><img src="images/cooltouch-logo.jpg" alt="" /></div>
+                </header>
+                <section class="container-fluid margin-T20">
+                    <div class="col-lg-6 margin-T10">
+                        <label class="level-3">Name</label><span class="fieldvalueBox fieldvalueBox4 text-left" data-ng-bind="pc.patientFullName"></span>
+                    </div>
+                    <div class="col-lg-6 margin-T10">
+                        <label class="level2-2">Date Of Birth</label><span class="fieldvalueBox fieldvalueBox2 text-right" data-ng-bind="pc.patientDetails.dob"></span>
+                    </div>
+                    <div class="col-lg-6 margin-T10">
+                        <label class="level-3">Date</label><span class="fieldvalueBox fieldvalueBox1 text-left" data-ng-bind="pc.formatDate(pc.selectedProcedure.ProcedureDate)"></span>
+                    </div>
+                    <div class="col-lg-6 margin-T10">
+                        <label class="level2-2">Treatment Session Number</label><span class="fieldvalueBox fieldvalueBox2 text-right" data-ng-bind="pc.selectedProcedure.TreatmentSequenceId"></span>
+                    </div>
+                </section>
+                <section class="container-fluid">
+                    <div class="col-lg-8">
+                        <label class="level-9">Anesthesia:</label><span class="fieldvalueBox fieldvalueBox3 text-left">Benzocaine 20% Lidocaine 6% Tetracaine 4</span>
+                        <span class="clear"></span>
+                        <label class="level-9">Clinician:</label><span class="fieldvalueBox fieldvalueBox3 text-left">Ayman El-Attar</span>
+                        <span class="clear"></span>
+                        <label class="level-9">Other:</label><span class="fieldvalueBox fieldvalueBox3 text-left">-</span>
+                        <span class="clear"></span>
+                        <label class="level-9">Skin Type:</label>
+                        <span class="fieldvalueBox fieldvalueBox3 text-left">
+                            <span class="multiplecheck-box-s">I<br /><input type="checkbox" name="sk1" /></span>
+                            <span class="multiplecheck-box-s">II<br /><input type="checkbox" name="sk2" /></span>
+                            <span class="multiplecheck-box-s">III<br /><input type="checkbox" name="sk3" /></span>
+                            <span class="multiplecheck-box-s">IV<br /><input type="checkbox" name="sk4" /></span>
+                            <span class="multiplecheck-box-s">V<br /><input type="checkbox" name="sk5" /></span>
+                            <span class="multiplecheck-box-s">VI<br /><input type="checkbox" name="sk6" /></span>
+                        </span>
+                        <span class="clear"></span>
+                        <fieldset class="well the-fieldset">
+                            <legend class="the-legend">Procedures:</legend>
+                            <input type="checkbox" name="p1" /><label>Sign On Door</label><span class="clear"></span>
+                            <input type="checkbox" name="p2" /><label>Pt and staff eve protection</label><span class="clear"></span>
+                            <input type="checkbox" name="p3" /><label>Hand Piece Cleaned</label><span class="clear"></span>
+                            <input type="checkbox" name="p4" /><label>Check Cryogen</label><span class="clear"></span>
+                            <input type="checkbox" name="p5" /><label>Skin Clean and dry</label>
+                        </fieldset>
+                        <div class="clear"></div>
+                        <label class="level-11">Pre-Cooling</label>
+                        <span class="list-inline-checkbox">
+                            <input type="checkbox" name="p1" /> 30mse
+                            <input type="checkbox" name="p1" /> 25mse
+                            <input type="checkbox" name="p1" /> 20mse
+                        </span>
+                        <div class="clear"></div>
+                        <label class="level-11">Pre-Cooling</label>
+                        <span class="list-inline-checkbox">
+                            <input type="checkbox" name="p1" />
+                        </span>
+                        <div class="clear"></div>
+                        <label class="level-11">Hand Piece</label>
+                        <span class="list-inline-checkbox">
+                            <input type="checkbox" name="p1" />  10mm
+                        </span>
+                        <div class="clear"></div>
+                        <table class="table table-striped margin-T20">
+                            <thead>
+                                <tr>
+                                    <th>Area</th>
+                                    <th>BaselineTemp</th>
+                                    <th>Fluence</th>
+                                    <th>PeakTemp</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Forehead</td>
+                                    <td>1</td>
+                                    <td>2</td>
+                                    <td>3</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <span class="clear"></span>
+                        <span class="clear-space"></span>
+                        <label class="level1-8">Post Treatement Care:</label><span class="fieldvalueBox fieldvalueBox2 text-left">aaa</span>
+                        <span class="clear"></span>
+                        <label class="level1-8">Instruction:</label><span class="fieldvalueBox fieldvalueBox2 text-left">vvv</span>
+                        <span class="clear"></span>
+                        <span class="clear-space30"></span>
+                        <span class="signtitlebox text-left">Ayman El-Attar, MD.</span>
+                        <span class="clear"></span>
+                        <div class="signbox"><img src="images/signature.gif" alt="" /></div>
+                    </div>
+                    <div class="col-lg-4 marksbox">
+                        <h3>Mark Areas Treated</h3>
+                        <div class="clear"></div>
+                        <div class="markareaR">R</div>
+                        <div class="markareaC">
+                            <img src="images/mark-area-pic.gif" alt="" />
+                            <span class="forhead"><input type="checkbox" name="forehead" /></span>
+                            <span class="cheek-l"><input type="checkbox" name="forehead" /></span>
+                            <span class="cheek-r"><input type="checkbox" name="forehead" /></span>
+                            <span class="chin"><input type="checkbox" name="forehead" /></span>
+                            <span class="throat"><input type="checkbox" name="forehead" /></span>
+                        </div>
+                        <div class="markareaL">L</div>
+                    </div>
+                </section>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,80 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <title>Consent To Treatment</title>
+    <!--[if lt IE 9]>
+    <script src="js/html5.js"></script>
+    <![endif]-->
+    <script src="scripts/vendor.js"></script>
+    <link rel="stylesheet" href="styles/print-bootstrap.css" />
+    <link rel="stylesheet" href="styles/print-bootstrap-theme.css" />
+    <link rel="stylesheet" href="styles/print.css" />
+</head>
+<body>    
+    <div class="mainouterbox">
+        <div class="container-fluid">
+            <form method="post" action="">
+                <header class="container-fluid">
+                    <div class="logodcbox"><img src="images/dc-logo.jpg" alt="" /></div>
+                    <div class="formtitlebox">
+                        <hgroup style="margin-left:-30px">
+                            <h2>Derma Laser Centers</h2>
+                            <h3>Patient Consent To Treament</h3>
+                        </hgroup>
+                    </div>
+                </header>
+                <section class="container-fluid margin-T20">
+                    <table class="table" border="0">
+                        <tbody>
+                            <tr>
+                                <td width="30%" style="text-align:center"><input type="checkbox" data-ng-checked="pc.selectedProcedure.BotoxYN" id="botoxc"> Botox</td>
+                                <td width="30%" style="text-align:center"><input type="checkbox" data-ng-checked="pc.selectedProcedure.HyalorunicYN" id="acidc"> Hyalorunic Acid</td>
+                                <td width="30%" style="text-align:center"><input type="checkbox" data-ng-checked="pc.selectedProcedure.MesoYN" id="mesoc"> Mesotherapy</td>
+                                <td width="10%"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <ol>
+                        <li>The nature and purpose of the operation, possible alternative methods of treatment, the risks involved, the possible consequences, and the possibility of complications have been explained to me by Dr. El Attar and staff. Among the possibilities: Facial or body swelling, bruising, local or general reaction, and/or discoloration and scattered areas of numbness all may persist for several weeks.<br /><br /></li>
+                        <li>Results are temporary and the length of time the injectable material lasts varies in each patient. No guarantee can be made with regard to the result or length of time it will last.<br /><br /></li>
+                        <li>I hereby authorize the injection(s) listed above, to my body, face and/or lips.<br /><br /></li>
+                        <li>I consent to the performance of the operations and procedures in addition to or different from those now contemplated, whether or not arising from presently unforeseen conditions, which the Doctor or his associates or assistants may consider advisable in the course of the operation.<br /><br /></li>
+                        <li>The services of Dr. El Attar are non-refundable. <br /><br /></li>
+                        <li>I consent to the administration of topical, local anesthesia as may be considered necessary or advisable by Dr. El Attar.<br /><br /></li>
+                        <li>I acknowledge that no guarantee or assurance has been given by anyone as the results which may be obtained. <br /><br /></li>
+                        <li>This office is regulated by the rules of the Board of Medicine as set forth in Rule Chapter 64B8, F.C.A. </li>
+                    </ol>
+                    I am aware that the practice of medicine and surgery is not an exact science and I acknowledge that no guarantees have been made to me as to the results of the procedure nor are there any guarantees against an unfavorable result. I acknowledge that you will do your best for me, but I also recognize that you lack infallibility and that mistakes and accidents can occur in medicine as they can in any discipline. In the absence of a deliberate, premeditated act of negligence, I will not sue you.<br /><br />
+                    <span style="font-size:12px;display:none" id="botox">
+                        Each patient responds differently to Botox and may respond differently from one treatment to the next. Dr. El Attar cannot guarantee the length of time the Botox will last or the effect that it will have and it is being administered only for its cosmetic effect. Botox has been reported to aggravate existing headaches or cause chronic headaches and may cause flu-like symptoms and prolonged intense fatigue.<br/><br/>
+                    </span>
+                    <span style="font-size:12px;display:none" id="acid">
+                        Hyalorunic acid is a product that has been on the market worldwide. It typically lasts 7 to 12 months. However, each patient responds differently to hyalorunic acid. No guarantee can be made with regard to the result or length of time it will last.<br /><br />                        
+                    </span>
+                    <span style="font-size:12px;display:none" id="meso">
+                        Mesotherapy involves the use of many ingredients that are either homeopathic and off-label use of medicinal ingredients.<br /><br />
+                    </span>
+                </section>
+                <label>Patient Name : </label><span class="fieldvalueBox fieldvalueBox3 text-left" data-ng-bind="pc.patientFullName"></span><br /><br />
+                <b>Patient Signature</b> : <span style="border-bottom:1px solid">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <label>Date : </label><span class="fieldvalueBox fieldvalueBox1 text-left" data-ng-bind="pc.formatDate(pc.selectedProcedure.ProcedureDate)"></span>
+            </form>
+        </div>
+    </div>
+    <script>
+        if ($("#botoxc").is(':checked')) {
+            $("#botox").show();
+        }
+
+        if ($("#acidc").is(':checked')) {
+            $("#acid").show();
+        }
+
+        if ($("#mesoc").is(':checked')) {
+            $("#meso").show();
+        }
+    </script>
+</body>
+</html>

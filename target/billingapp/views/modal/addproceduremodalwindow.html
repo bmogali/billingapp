@@ -1,0 +1,14 @@
+﻿<div class="modal-header">
+    <h3>Add Procedure</h3>
+</div>
+<div class="modal-body">
+    <span class="ui-select-multiple">
+        <select size="10" ng-model="apmic.selectedProcedure" ng-options="t.procedureName for t in apmic.proceduresMasterData | orderBy: 'procedureName'">
+            <option value="">----Select Procedure----</option>
+        </select>
+    </span>
+</div>
+<div class="modal-footer">
+    <button class="btn btn-primary" ng-disabled="apmic.okButtonDisabled()" ng-click="apmic.ok()">Ok</button>
+    <button class="btn btn-primary" ng-click="apmic.cancel()">Cancel</button>
+</div>

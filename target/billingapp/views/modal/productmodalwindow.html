@@ -1,0 +1,17 @@
+﻿<div class="modal-header">
+    <h3>Products Billing</h3>
+</div>
+<div class="modal-body">
+    <strong>Products to be billed for : </strong><span style="color: green; font-size: 14px"><strong>{{pmic.patientName}}</strong></span>
+    <div class="divider"></div>
+    <div kendo-grid="pmic.productdatagrid"
+         k-options="pmic.productgridoptions"
+         k-data-source="pmic.productBills"
+         id="productsGrid"></div>
+    <div class="divider"></div>
+    <strong>Total Products : </strong><span style="color: green; font-size: 14px"><strong>{{pmic.totalProductsBill}}</strong></span>
+</div>
+<div class="modal-footer">
+    <button class="btn btn-primary" ng-click="pmic.ok()">Update</button>
+    <button class="btn btn-warning" ng-click="pmic.cancel()">Cancel</button>
+</div>

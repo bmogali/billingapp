@@ -1,0 +1,113 @@
+<html>
+<head>
+    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="bower_components/weather-icons/css/weather-icons.min.css">
+    <link rel="stylesheet" href="bower_components/angular-block-ui/dist/angular-block-ui.min.css" />
+
+    <!-- end Needs images -->
+    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="stylesheet" href="styles/kendo/kendo.common.min.css">
+    <link rel="stylesheet" href="styles/kendo/kendo.default.min.css">
+</head>
+<body>
+    <div class="grid-structure">
+        <div class="divider"></div>
+        <table class="table" border="0">
+            <tbody>
+                <tr>
+                    <td width="20%"><label class="control-label">First Name</label></td>
+                    <td width="30%"><span data-ng-bind="pc.patientDetails.firstName" /></td>
+                    <td width="20%"><label class="control-label">Last Name</label></td>
+                    <td width="30%"><span data-ng-bind="pc.patientDetails.lastName" /></td>
+                </tr>
+                <tr>
+                    <td width="20%"><label class="control-label">Date</label></td>
+                    <td width="30%"><span data-ng-bind="pc.selectedProcedure.ProcedureDate" /></td>
+                    <td width="20%"><label class="control-label">Session #</label></td>
+                    <td width="30%"><span data-ng-bind="pc.selectedProcedure.TreatmentSequenceId" /></td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table" border="0">
+            <tbody>
+                <tr>
+                    <td width="25%"><label class="control-label">Prior treatment complication ?</label></td>
+                    <td width="5%"><input type="checkbox" data-ng-checked="pc.selectedProcedure.PriorComplication"></td>
+                    <td width="50%"><span data-ng-bind="pc.selectedProcedure.ComplicationDescription"></td>
+                </tr>
+            </tbody>
+        </table>
+        <fieldset class="scheduler-border" style="width: 400px;">
+            <legend class="scheduler-border"> BLT Cream Used </legend>
+            <table class="table" border="0">
+                <tbody>
+                    <tr>
+                        <td width="25%"></td>
+                        <td width="25%" style="text-align:center"><input type="checkbox" data-ng-checked="pc.selectedProcedure.BLTCreamUsedYes"> Yes</td>
+                        <td width="25%" style="text-align:center"><input type="checkbox" data-ng-checked="pc.selectedProcedure.BLTCreamUsedNo"> No</td>
+                        <td width="25%"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </fieldset>
+        <fieldset class="scheduler-border" style="width: 400px;">
+            <legend class="scheduler-border"> Treated Area </legend>
+            <table class="table" border="0">
+                <tbody>
+                    <tr>
+                        <td width="25%"><input type="checkbox" data-ng-checked="pc.selectedProcedure.Calf"> Calf</td>
+                        <td width="25%"><input type="checkbox" data-ng-checked="pc.selectedProcedure.Thigh"> Thigh</td>
+                        <td width="25%"><input type="checkbox" data-ng-checked="pc.selectedProcedure.Face"> Face</td>
+                        <td width="25%"><input type="checkbox" data-ng-checked="pc.selectedProcedure.Back"> Back</td>
+                    </tr>
+                    <tr>
+                        <td width="25%"><input type="checkbox" data-ng-checked="pc.selectedProcedure.Chest"> Chest</td>
+                        <td width="25%"><input type="checkbox" data-ng-checked="pc.selectedProcedure.OtherArea"> Other Area</td>
+                        <td width="50%" colspan="2"><span data-ng-bind="pc.selectedProcedure.OtherAreaDescription"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </fieldset>
+        <fieldset class="scheduler-border" style="width: 400px;">
+            <legend class="scheduler-border"> Energy </legend>
+            <table class="table" border="0">
+                <tbody>
+                    <tr>
+                        <td width="25%"><input type="checkbox" data-ng-checked="pc.selectedProcedure.Energy14"> 14 J/cm2</td>
+                        <td width="25%"><input type="checkbox" data-ng-checked="pc.selectedProcedure.Energy15"> 15 J/cm2</td>
+                        <td width="25%"><input type="checkbox" data-ng-checked="pc.selectedProcedure.Energy16"> 16 J/cm2</td>
+                        <td width="25%"><input type="checkbox" data-ng-checked="pc.selectedProcedure.Energy17"> 17 J/cm2</td>
+                    </tr>
+                </tbody>
+            </table>
+        </fieldset>
+        <fieldset class="scheduler-border" style="width: 400px;">
+            <legend class="scheduler-border"> Power </legend>
+            <table class="table" border="0">
+                <tbody>
+                    <tr>
+                        <td width="25%"><input type="checkbox" data-ng-checked="pc.selectedProcedure.Power3"> 3</td>
+                        <td width="25%"></td>
+                        <td width="25%"></td>
+                        <td width="25%"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </fieldset>
+        <fieldset class="scheduler-border" style="width: 400px;">
+            <legend class="scheduler-border"> RR </legend>
+            <table class="table" border="0">
+                <tbody>
+                    <tr>
+                        <td width="25%"><input type="checkbox" data-ng-checked="pc.selectedProcedure.RR5"> 5</td>
+                        <td width="25%"><input type="checkbox" data-ng-checked="pc.selectedProcedure.RR6"> 6</td>
+                        <td width="10%"><input type="checkbox" data-ng-checked="pc.selectedProcedure.RR7"> 7</td>
+                        <td width="30%">T. No. of Pulses</td>
+                        <td width="10%"><span data-ng-bind="pc.selectedProcedure.NumberofPulses"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </fieldset>
+    </div>
+</body>
+</html>

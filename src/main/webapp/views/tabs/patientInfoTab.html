@@ -1,0 +1,5 @@
+﻿<button class="btn btn-danger btn-xs pull-right" ng-disabled="pc.patientDetails.patientId == 0" ng-click="pc.deletePatient()"><span class="glyphicon glyphicon-trash"></span> Delete</button>
+<button class="btn btn-warning btn-xs pull-right" style="margin-right:10px;" ng-click="pc.updatePatientDetails()"><span class="glyphicon glyphicon-open"></span> Update</button>
+<button class="btn btn-primary btn-xs" data-ng-disabled="pc.currentTab == 'PatientTab'" ng-click="pc.toggleWindow('PatientTab')">Basic Info</button>
+<button class="btn btn-primary btn-xs" data-ng-disabled="pc.currentTab == 'EmployerInsurance'" ng-click="pc.toggleWindow('EmployerInsurance')">Employer/Insurance</button>
+<button class="btn btn-primary btn-xs" data-ng-disabled="pc.currentTab == 'Pictures' || pc.patientDetails.patientId == 0" ng-click="pc.toggleWindow('Pictures')">Pictures</button>

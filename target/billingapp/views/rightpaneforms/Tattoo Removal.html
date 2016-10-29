@@ -1,0 +1,88 @@
+<div class="grid-structure">
+    <table class="table" border="0">
+        <tbody>
+            <tr>
+                <td width="11%" style="vertical-align:middle"></td>
+                <td width="11%" style="vertical-align:middle"></td>
+                <td width="56%" style="text-align:center"><span ng-bind="pc.selectedProcedureName" class="text-center text-capitalize size-h3" style="vertical-align:top"></span></td>
+                <td width="11%" style="vertical-align:middle"><button class="btn btn-warning btn-xs" ng-click="pc.updateProcedure()"><span class="glyphicon glyphicon-open"></span> Update</button></td>
+                <td width="11%" style="vertical-align:middle"><button class="btn btn-danger btn-xs" style="margin-right:10px;" ng-click="pc.deleteProcedure()"><span class="glyphicon glyphicon-trash"></span> Delete</button></td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="divider"></div>
+    <table class="table" border="0">
+        <tbody>
+            <tr>
+                <td width="20%"><label class="control-label">First Name</label></td>
+                <td width="30%"><input type="text" class="form-control" data-ng-model="pc.patientDetails.firstName"></td>
+                <td width="20%"><label class="control-label">Last Name</label></td>
+                <td width="30%"><input type="text" class="form-control" data-ng-model="pc.patientDetails.lastName"></td>
+            </tr>
+            <tr>
+                <td width="20%"><label class="control-label">Date</label></td>
+                <td width="30%"><input kendo-date-picker k-format="'MM-dd-yyyy'" style="width: 100%" data-ng-model="pc.selectedProcedure.ProcedureDate" /></td>
+                <td width="20%"><label class="control-label">Session #</label></td>
+                <td width="30%"><input type="text" class="form-control" data-ng-model="pc.selectedProcedure.TreatmentSequenceId"></td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table" border="0">
+        <tbody>
+            <tr>
+                <td width="25%"><label class="control-label">Prior treatment complication ?</label></td>
+                <td width="5%"><input type="checkbox" data-ng-model="pc.selectedProcedure.PriorComplication"></td>
+                <td width="50%"><input type="text" class="form-control" data-ng-model="pc.selectedProcedure.ComplicationDescription"></td>
+            </tr>
+        </tbody>
+    </table>
+    <fieldset class="scheduler-border" style="width: 500px;">
+        <legend class="scheduler-border"> Treated Area </legend>
+        <table class="table" border="0">
+            <tbody>
+                <tr>
+                    <td width="25%"><input type="checkbox" data-ng-model="pc.selectedProcedure.Face"> Face</td>
+                    <td width="25%"><input type="checkbox" data-ng-model="pc.selectedProcedure.Back"> Back</td>
+                    <td width="25%"><input type="checkbox" data-ng-model="pc.selectedProcedure.Leg"> Leg</td>
+                    <td width="25%"><input type="checkbox" data-ng-model="pc.selectedProcedure.Chest"> Chest</td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table" border="0">
+            <tbody>
+                <tr>
+                    <td width="25%"><input type="checkbox" data-ng-model="pc.selectedProcedure.Arms"> Arms</td>
+                    <td width="25%"><input type="checkbox" data-ng-model="pc.selectedProcedure.OtherArea"> Other Area</td>
+                    <td width="50%" colspan="2"><input type="text" class="form-control" data-ng-model="pc.selectedProcedure.OtherAreaDescription"></td>
+                </tr>
+            </tbody>
+        </table>
+    </fieldset>
+    
+    <fieldset class="scheduler-border" style="width: 500px;">
+        <legend class="scheduler-border"> KTP 532 rate </legend>
+        <table class="table" border="0">
+            <tbody>
+                <tr>
+                    <td width="25%"><input type="checkbox" data-ng-model="pc.selectedProcedure.Energy30"> 2</td>
+                    <td width="25%"><input type="checkbox" data-ng-model="pc.selectedProcedure.Energy45"> 3</td>
+                    <td width="25%"><input type="checkbox" data-ng-model="pc.selectedProcedure.Energy60"> 4</td>
+                    <td width="25%"><input type="checkbox" data-ng-model="pc.selectedProcedure.Energy75"> 5</td>
+                </tr>
+            </tbody>
+        </table>
+    </fieldset>
+    <fieldset class="scheduler-border" style="width: 500px;">
+        <legend class="scheduler-border"> Nd: YAG 1064 </legend>
+        <table class="table" border="0">
+            <tbody>
+                <tr>
+                    <td width="25%"><input type="checkbox" data-ng-model="pc.selectedProcedure.PPS2"> 2</td>
+                    <td width="25%"><input type="checkbox" data-ng-model="pc.selectedProcedure.PPS3"> 3</td>
+                    <td width="25%"><input type="checkbox" data-ng-model="pc.selectedProcedure.PPS25"> 4</td>
+                    <td width="25%"><input type="checkbox" data-ng-model="pc.selectedProcedure.PPSMax"> 5</td>
+                </tr>
+            </tbody>
+        </table>
+    </fieldset>
+</div>

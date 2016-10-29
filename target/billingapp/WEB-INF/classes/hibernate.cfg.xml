@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+    "-//Hibernate/Hibernate Configuration DTD//EN"
+    "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+	<session-factory>
+
+		<mapping class="com.billingapp.rest.dto.ProcedureDTO" />
+		<mapping class="com.billingapp.rest.dto.PatientDTO" />
+		<mapping class="com.billingapp.rest.dto.ProductDTO" />
+		<mapping class="com.billingapp.rest.dto.CreditApplicationDTO" />
+		<mapping class="com.billingapp.rest.dto.CreditTypesDTO" />
+		<mapping class="com.billingapp.rest.dto.ChargeTypeDTO" />
+		
+		<mapping class="com.billingapp.rest.dto.AreasDTO" />
+		<mapping class="com.billingapp.rest.dto.ProcedureAreasDTO" />
+
+		<mapping class="com.billingapp.rest.dto.FormDTO" />
+		
+
+		<mapping class="com.billingapp.rest.dto.PatientProcedureDTO" />
+		<mapping class="com.billingapp.rest.dto.PatientChargeDTO" />
+		<mapping class="com.billingapp.rest.dto.PatientProductDTO" />
+
+		<mapping class="com.billingapp.rest.dto.PatientCreditDTO" />
+		
+		<mapping class="com.billingapp.rest.dto.PatientEstimatesDTO" />
+		<mapping class="com.billingapp.rest.dto.PatientImagesDTO" />
+		<mapping class="com.billingapp.rest.dto.User" />
+		<mapping class="com.billingapp.rest.dto.UserRoles" />
+		<mapping class="com.billingapp.rest.dto.Role" />
+		<mapping class="com.billingapp.rest.dto.TaxRatesDTO" />
+		
+
+	</session-factory>
+</hibernate-configuration>

@@ -1,0 +1,36 @@
+<div class="page page-profile">
+    <div class="row">
+        <div class="col-md-5 col-md-offset-3">
+            <div class="panel panel-default">
+                <div class="panel-heading"><strong><span class="glyphicon glyphicon-th"></span> Profile Info</strong></div>
+                <div class="panel-body">
+                    <div class="media">
+                        <div class="media-body">
+                            <ul class="list-unstyled list-info">
+                                <li>
+                                    <span class="icon glyphicon glyphicon-user"></span>
+                                    <label>User name</label>
+                                    {{upc.RequestedUser.UserName}}
+                                </li>
+                                <li>
+                                    <span class="icon glyphicon glyphicon-envelope"></span>
+                                    <label>Email</label>
+                                    <input size="30" type="text" data-ng-model="upc.RequestedUser.EmailId" />
+                                </li>
+                                <li>
+                                    <span class="icon glyphicon glyphicon-credit-card"></span>
+                                    <label>Credits</label>
+                                    {{upc.RequestedUser.Credits}}
+                                </li>
+                            </ul>
+                            <button class="btn btn-primary" data-ng-click="upc.updateUserInfo()">
+                                <span class="glyphicon glyphicon-arrow-down"></span>
+                                Update Info
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

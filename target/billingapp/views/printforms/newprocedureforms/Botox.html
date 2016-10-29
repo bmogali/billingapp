@@ -1,0 +1,194 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <title>Botox</title>
+    <!--[if lt IE 9]>
+    <script src="js/html5.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="styles/print-bootstrap.css" />
+    <link rel="stylesheet" href="styles/print-bootstrap-theme.css" />
+    <link rel="stylesheet" href="styles/print.css" />
+</head>
+<body>
+    <div class="mainouterbox">
+        <div class="container-fluid">
+            <form method="post" action="">
+                <header class="container-fluid">
+                    <div class="logodcbox"><img src="images/dc-logo.jpg" alt="" /></div>
+                    <div class="formtitlebox">
+                        <hgroup>
+                            <h2>Derma Laser Centers</h2>
+                            <h3>Botox Injection</h3>
+                        </hgroup>
+                    </div>
+                </header>
+                <section class="container-fluid margin-T20">
+                    <div class="col-lg-6 margin-T10">
+                        <label class="level-3">Name</label><span class="fieldvalueBox fieldvalueBox4 text-left" data-ng-bind="pc.patientFullName"></span>
+                    </div>
+                    <div class="col-lg-6 margin-T10">
+                        <label class="level2-2">Date Of Birth</label><span class="fieldvalueBox fieldvalueBox2 text-right" data-ng-bind="pc.patientDetails.dob"></span>
+                    </div>
+                    <div class="col-lg-6 margin-T10">
+                        <label class="level-3">Date</label><span class="fieldvalueBox fieldvalueBox1 text-left" data-ng-bind="pc.formatDate(pc.selectedProcedure.ProcedureDate)"></span>
+                    </div>
+                    <div class="col-lg-6 margin-T10">
+                        <label class="level2-2">Treatment Session Number</label><span class="fieldvalueBox fieldvalueBox2 text-right" data-ng-bind="pc.selectedProcedure.TreatmentSequenceId"></span>
+                    </div>
+                </section>
+                <section class="container-fluid">
+                    <div class="col-lg-12">
+                        <label class="level-12">Prior Last Treatment Complication : </label><span class="multiplecheck-box-s"><input type="checkbox" data-ng-checked="pc.selectedProcedure.PriorComplication" /></span>
+                        <span class="clear"></span>
+                        <label class="level-12">If Yes, Describe : </label><span class="fieldvalueBox fieldvalueBox3 text-left" data-ng-bind="pc.selectedProcedure.ComplicationDescription"></span>
+                        <span class="clear"></span>
+                        <label class="level-12">Allergies : </label><span class="fieldvalueBox fieldvalueBox3 text-left" data-ng-bind="pc.patientDetails.allergies"></span>
+                        <span class="clear"></span>
+                        <label class="level-12">Medical History : </label><span class="fieldvalueBox fieldvalueBox3 text-left" data-ng-model="pc.patientDetails.medicalHistory"></span>
+                        <span class="clear"></span>
+                        <label class="level-3">Exp : </label><span class="fieldvalueBox fieldvalueBox4 text-left" data-ng-bind="pc.selectedprocedure.expdate"></span>
+                        <label class="level-3">Lot : </label><span class="fieldvalueBox fieldvalueBox4 text-left" data-ng-bind="pc.selectedProcedure.Lot"></span>
+                        <span class="clear"></span>
+                        <label class="level-14">Dilution:</label><input type="checkbox" style="float:left;margin-right:10px" data-ng-checked="pc.selectedProcedure.Dilution001" /> <span class="fieldvalueBox fieldvalueBox4">4 units/0.1 cc</span>
+                        <input type="checkbox" style="float:left;margin-right:10px" data-ng-checked="pc.selectedProcedure.Dilutionother" /> <span class="fieldvalueBox fieldvalueBox4 text-left" data-ng-bind="pc.selectedProcedure.DilutionAmount"></span>
+                        <fieldset class="well the-fieldset">
+                            <legend class="the-legend">Treated Area - Units/Injection - Injections - Total Units</legend>
+                            <table class="table" border="0">
+                                <tbody>
+                                    <tr>
+                                        <td width="25%"><input type="checkbox" data-ng-checked="pc.selectedProcedure.Forehead"> Forhead</td>
+                                        <td width="25%"><span data-ng-bind="pc.selectedProcedure.ForheadUnitPerInj" /></td>
+                                        <td width="25%"><span data-ng-bind="pc.selectedProcedure.ForheadNumberofInj" /></td>
+                                        <td width="25%"><span data-ng-bind="pc.selectedProcedure.forheadml" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td width="25%"><input type="checkbox" data-ng-checked="pc.selectedProcedure.glabellayn"> Glabella</td>
+                                        <td width="25%"><span data-ng-bind="pc.selectedProcedure.GlabellaUnitPerInj" /></td>
+                                        <td width="25%"><span data-ng-bind="pc.selectedProcedure.GlabellaNumberofInj" /></td>
+                                        <td width="25%"><span data-ng-bind="pc.selectedProcedure.glabellaynml" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td width="25%"><input type="checkbox" data-ng-checked="pc.selectedProcedure.crowsfeetyn"> Crows Feet</td>
+                                        <td width="25%"><span data-ng-bind="pc.selectedProcedure.CrowsFeetUnitPerInj" /></td>
+                                        <td width="25%"><span data-ng-bind="pc.selectedProcedure.CrowsFeetNumberofInj" /></td>
+                                        <td width="25%"><span data-ng-bind="pc.selectedProcedure.crowsfeetml" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td width="25%"><input type="checkbox" data-ng-checked="pc.selectedProcedure.eyebrowyn"> Eyebrow</td>
+                                        <td width="25%"><span data-ng-bind="pc.selectedProcedure.EyebrowUnitPerInj" /></td>
+                                        <td width="25%"><span data-ng-bind="pc.selectedProcedure.EyebrowNumberofInj" /></td>
+                                        <td width="25%"><span data-ng-bind="pc.selectedProcedure.eyebrowml" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td width="25%"><input type="checkbox" data-ng-checked="pc.selectedProcedure.UpperLip"> Upper Lip</td>
+                                        <td width="25%"><span data-ng-bind="pc.selectedProcedure.UpperLipUnitPerInj" /></td>
+                                        <td width="25%"><span data-ng-bind="pc.selectedProcedure.UpperLipNumberofInj" /></td>
+                                        <td width="25%"><span data-ng-bind="pc.selectedProcedure.upperlipml" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td width="25%"><input type="checkbox" data-ng-checked="pc.selectedProcedure.platysmayn"> Platysma</td>
+                                        <td width="25%"><span data-ng-bind="pc.selectedProcedure.PlatysmaUnitPerInj" /></td>
+                                        <td width="25%"><span data-ng-bind="pc.selectedProcedure.PlatysmaNumberofInj" /></td>
+                                        <td width="25%"><span data-ng-bind="pc.selectedProcedure.platysmaml" /></td>
+                                    </tr>
+                                    <tr>
+                                        <td width="25%"><input type="checkbox" data-ng-checked="pc.selectedProcedure.OtherArea"> Other Area</td>
+                                        <td width="25%"><span data-ng-bind="pc.selectedProcedure.OtherAreaUnitPerInj" /></td>
+                                        <td width="25%"><span data-ng-bind="pc.selectedProcedure.OtherAreaNumberofInj" /></td>
+                                        <td width="25%"><span data-ng-bind="pc.selectedProcedure.otherml" /></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </fieldset>
+                        <span class="clear"></span>
+                        <br />
+                        <label class="level-12">Allergic To Latex : </label><span class="fieldvalueBox fieldvalueBox3 text-left">Yes</span>
+                        <span class="clear"></span>
+                        <br />
+                        <label class="level-12">Med Hx : </label><span class="fieldvalueBox fieldvalueBox3 text-left">Yes</span>
+                        <span class="clear"></span>
+                        <br />
+                        <div class="col-lg-12 bottom-aligned-text" style="text-align:center;">
+                            <div class="col-lg-5">
+                                <div class="signbox"><img src="images/signature.gif" alt="" /></div>
+                            </div>
+                            <div class="col-lg-3">
+                                &nbsp;
+                            </div>
+                            <div class="col-lg-4" style="border-bottom:1px solid #CCC;margin-top:50px">
+                                <span data-ng-bind="pc.currentDate" />
+                            </div>
+                        </div>
+                        <div class="col-lg-12" style="text-align:center;">
+                            <div class="col-lg-5">
+                                Ayman El-Attar, MD.
+                            </div>
+                            <div class="col-lg-3">
+                                &nbsp;
+                            </div>
+                            <div class="col-lg-4">
+                                Date
+                            </div>
+                        </div>
+                        <div style="page-break-after:always"></div>
+                    </div>
+                </section>
+            </form>
+        </div>
+    </div>
+    <div class="mainouterbox">
+        <div class="container-fluid">
+            <form method="post" action="">
+                <header class="container-fluid">
+                    <div class="logodcbox"><img src="images/dc-logo.jpg" alt="" /></div>
+                </header>
+                <section class="container-fluid">
+                    <div class="col-lg-12">
+                        <br />
+                        Dear <span class="fieldvalueBox fieldvalueBox4 text-left" data-ng-bind="pc.patientFullName" />
+                        <br />
+                        <br />
+                        <span class="clear"></span>
+                        Thank you for electing to have your recent procedure done by Derma Laser Centers.  We value your business and truly feel that your skin’s beauty is our mission.  Although you’ve already been instructed about the post treatment procedures by Dr. El-Attar, we wanted to provide you with a written set of instructions as well.
+                        <br />
+                        <br />
+                        <br />
+                        <div style="text-align:center">
+                            <h3>BOTOX POST TREATMENT INSTRUCTIONS</h3>
+                        </div>
+                        <br />
+                        <span class="clear"></span>
+                        <span class="clear"></span>
+                        <div style="width:500px;margin: 0 auto;">
+                            <ul>
+                                <li><u>Do not lie down for 3-4 hours</u> following treatment.</li>
+                                <li><u>Perform Facial Exercise</u> in the area of treatment (Frown/Smile 1 hour).</li>
+                                <li><u>Avoid manipulation</u> of this area for 4 hours.</li>
+                            </ul>
+                        </div>
+                        <br />
+                        <span class="clear"></span>
+                        These measures should minimize the possibility of ptosis to almost 100%.
+                        <span class="clear"></span>
+                        <br />
+                        <div style="text-align:center">
+                            <u>TREATMENT EFFECT MAY TAKE 3-14 DAYS</u>
+                        </div>
+                        <span class="clear"></span>
+                        <br />
+                        The benefits <u>may last 3-6 months</u> : average is 4 months.
+                        <span class="clear"></span>
+                        <br />
+                        Please inform us, if resolution of lines has not taken effect within 14 days. A touch up may be necessary, and is free of charge.
+                        <span class="clear"></span>
+                        <br />
+                        <b>Please make sure to follow all instructions as written and don’t forget to make your follow-up appointment for your next treatment on or around 4/23/2015.</b>
+                    </div>
+                </section>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

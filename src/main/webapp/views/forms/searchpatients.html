@@ -1,0 +1,56 @@
+<div class="page page-profile">
+    <div class="row">
+        <div class="col-lg-5">
+            <div class="panel panel-default">
+                <div class="panel-heading"><span class="glyphicon glyphicon-th"></span> Patients Interface</div>
+                <div class="panel-body" style="height: 540px">
+                    <div class="media">
+                        <div class="media-body">
+                            <table class="table" border="0">
+                                <tbody>
+                                    <tr>
+                                        <td width="10%"></td>
+                                        <td width="10%"><label class="control-label">Search</label></td>
+                                        <td width="40%"><input type="text" id="PatientSearchCriteria" name="PatientSearchCriteria" class="form-control" placeholder="Criteria" data-ng-model="pc.searchCriteria" ng-enter="pc.patientSearchResults.read()"></td>
+                                        <td width="20%"><button class="btn btn-primary btn-smt" ng-click="pc.patientSearchResults.read()">Search</button></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <button class="btn btn-danger btn-sm pull-right" ng-click="pc.addNewPatient()">Add New Patient</button>
+                            <button class="btn btn-primary btn-sm" ng-click="pc.toggleResults()">{{pc.toggleText}}</button>
+                            <div class="divider"></div>
+                            <div collapse="pc.isCollapsed">
+                                <div kendo-grid="pc.datagrid"
+                                     k-options="pc.patientSearchResultsGridOptions"></div>
+                            </div>
+                            <div class="divider"></div>
+                            <div class="row" data-ng-show="pc.patientRowSelected">
+                                <div class="col-lg-12 col-sm-offset-2">
+                                    <button class="btn btn-primary btn-sm" data-ng-disabled="pc.currentTab == 'PatientTab' ||pc.currentTab == 'EmployerInsurance' || pc.currentTab == 'Pictures' " ng-click="pc.toggleWindow('PatientTab')">Patient</button>
+                                    <button class="btn btn-primary btn-sm" data-ng-disabled="(pc.currentTab != 'PatientTab' && pc.currentTab != 'BillingTab' && pc.currentTab != 'EmployerInsurance' && pc.currentTab != 'Pictures') || pc.procedureSelected === false" ng-click="pc.toggleWindow('ProcedureTab')">Procedure</button>
+                                    <button class="btn btn-primary btn-sm" data-ng-disabled="pc.currentTab == 'BillingTab'" ng-click="pc.toggleWindow('BillingTab')">Billing</button>
+                                    <button class="btn btn-primary btn-sm" ng-click="pc.printPatientConsentForm()">Consent Forms</button>
+                                </div>
+                            </div>
+                            <div class="divider"></div>
+                            <div kendo-grid="pc.mappingdatagrid"
+                                 id="mappingdatagrid"
+                                 k-options="pc.mappinggridoptions"
+                                 k-data-source="pc.patientDetails.patientProcedures"
+                                 k-rebind="pc.mappingDataGridOptionChanged"
+                                 data-ng-show="pc.patientRowSelected"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-7">
+            <div class="panel panel-default">
+                <div class="panel-heading"><span class="glyphicon glyphicon-th"></span> Details</div>
+                <div class="panel-body" style="height: 540px; background-color: #E8E8E8;">
+                    <data-right-pane></data-right-pane>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

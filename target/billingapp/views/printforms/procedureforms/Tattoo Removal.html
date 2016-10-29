@@ -1,0 +1,91 @@
+<html>
+<head>
+    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="bower_components/weather-icons/css/weather-icons.min.css">
+    <link rel="stylesheet" href="bower_components/angular-block-ui/dist/angular-block-ui.min.css" />
+
+    <!-- end Needs images -->
+    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="stylesheet" href="styles/kendo/kendo.common.min.css">
+    <link rel="stylesheet" href="styles/kendo/kendo.default.min.css">
+</head>
+<body>
+    <div class="grid-structure">
+        <div class="divider"></div>
+        <table class="table" border="0">
+            <tbody>
+                <tr>
+                    <td width="20%"><label class="control-label">First Name</label></td>
+                    <td width="30%"><span data-ng-bind="pc.patientDetails.firstName" /></td>
+                    <td width="20%"><label class="control-label">Last Name</label></td>
+                    <td width="30%"><span data-ng-bind="pc.patientDetails.lastName" /></td>
+                </tr>
+                <tr>
+                    <td width="20%"><label class="control-label">Date</label></td>
+                    <td width="30%"><span data-ng-bind="pc.selectedProcedure.ProcedureDate" /></td>
+                    <td width="20%"><label class="control-label">Session #</label></td>
+                    <td width="30%"><span data-ng-bind="pc.selectedProcedure.TreatmentSequenceId" /></td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table" border="0">
+            <tbody>
+                <tr>
+                    <td width="25%"><label class="control-label">Prior treatment complication ?</label></td>
+                    <td width="5%"><input type="checkbox" data-ng-checked="pc.selectedProcedure.PriorComplication"></td>
+                    <td width="50%"><span data-ng-bind="pc.selectedProcedure.ComplicationDescription" /></td>
+                </tr>
+            </tbody>
+        </table>
+        <fieldset class="scheduler-border" style="width: 500px;">
+            <legend class="scheduler-border"> Treated Area </legend>
+            <table class="table" border="0">
+                <tbody>
+                    <tr>
+                        <td width="25%"><input type="checkbox" data-ng-checked="pc.selectedProcedure.Face"> Face</td>
+                        <td width="25%"><input type="checkbox" data-ng-checked="pc.selectedProcedure.Back"> Back</td>
+                        <td width="25%"><input type="checkbox" data-ng-checked="pc.selectedProcedure.Leg"> Leg</td>
+                        <td width="25%"><input type="checkbox" data-ng-checked="pc.selectedProcedure.Chest"> Chest</td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="table" border="0">
+                <tbody>
+                    <tr>
+                        <td width="25%"><input type="checkbox" data-ng-checked="pc.selectedProcedure.Arms"> Arms</td>
+                        <td width="25%"><input type="checkbox" data-ng-checked="pc.selectedProcedure.OtherArea"> Other Area</td>
+                        <td width="50%" colspan="2"><span data-ng-bind="pc.selectedProcedure.OtherAreaDescription" /></td>
+                    </tr>
+                </tbody>
+            </table>
+        </fieldset>
+
+        <fieldset class="scheduler-border" style="width: 500px;">
+            <legend class="scheduler-border"> KTP 532 rate </legend>
+            <table class="table" border="0">
+                <tbody>
+                    <tr>
+                        <td width="25%"><input type="checkbox" data-ng-checked="pc.selectedProcedure.Energy30"> 2</td>
+                        <td width="25%"><input type="checkbox" data-ng-checked="pc.selectedProcedure.Energy45"> 3</td>
+                        <td width="25%"><input type="checkbox" data-ng-checked="pc.selectedProcedure.Energy60"> 4</td>
+                        <td width="25%"><input type="checkbox" data-ng-checked="pc.selectedProcedure.Energy75"> 5</td>
+                    </tr>
+                </tbody>
+            </table>
+        </fieldset>
+        <fieldset class="scheduler-border" style="width: 500px;">
+            <legend class="scheduler-border"> Nd: YAG 1064 </legend>
+            <table class="table" border="0">
+                <tbody>
+                    <tr>
+                        <td width="25%"><input type="checkbox" data-ng-checked="pc.selectedProcedure.PPS2"> 2</td>
+                        <td width="25%"><input type="checkbox" data-ng-checked="pc.selectedProcedure.PPS3"> 3</td>
+                        <td width="25%"><input type="checkbox" data-ng-checked="pc.selectedProcedure.PPS25"> 4</td>
+                        <td width="25%"><input type="checkbox" data-ng-checked="pc.selectedProcedure.PPSMax"> 5</td>
+                    </tr>
+                </tbody>
+            </table>
+        </fieldset>
+    </div>
+</body>
+</html>

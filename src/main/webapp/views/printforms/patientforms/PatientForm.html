@@ -1,0 +1,142 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <title>Patient Form</title>
+    <!--[if lt IE 9]>
+    <script src="js/html5.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="styles/print-bootstrap.css" />
+    <link rel="stylesheet" href="styles/print-bootstrap-theme.css" />
+    <link rel="stylesheet" href="styles/print-consentforms.css" />
+</head>
+<body>
+    <div class="mainouterbox">
+        <div class="container-fluid">
+            <header>
+                <section class="text-right">Patient History Form</section>
+                <div class="margin-V10"></div>
+                <section>
+                    <div class="col20 text-left"><img src="style/images/dc-logo.jpg" alt=""></div>
+                    <div class="col60 text-center">
+                        <h1>Derma Laser Centers Of New Jersey</h1>
+                        <h4>Hair Restoration and Cosmetic Laser Surgery</h4>
+                        <span class="col50">www.dermanj.com</span>
+                        <span class="col50">www.hairdocnj.com</span>
+                    </div>
+                    <div class="col20 text-right"><img src="style/images/dc-logo.jpg" alt=""></div>
+                </section>
+                <div class="margin-V10"></div>
+                <section>
+                    <div class="col33 text-left font-bold">Mercerville</div>
+                    <div class="col33 text-center font-bold">Ridgefield</div>
+                    <div class="col33 text-right font-bold">Somerset</div>
+                    <div class="col33 text-left">Tel: 609-631-8558</div>
+                    <div class="col33 text-center">&nbsp;</div>
+                    <div class="col33 text-right">Fax: 609-631-8118</div>
+                </section>
+            </header>
+
+            <section style="margin:20px 0;">
+                <div class="col50">
+                    <span class="float-left width90">Today’s Date:</span><span class="fill-blank220"></span><div class="clear-both margin-V10"></div>
+                    <span class="float-left width90">Name:</span><span class="fill-blank220" data-ng-bind="cmic.patientName"></span><div class="clear-both margin-V10"></div>
+                    <span class="float-left width90">Address:</span><span class="fill-blank220"></span><div class="clear-both margin-V10"></div>
+                    <span class="float-left width90">City:</span><span class="fill-blank220"></span><div class="clear-both margin-V10"></div>
+                </div>
+                <div class="col50">
+                    <span class="float-left width60">Home #:</span><span class="float-left margin-H5">(&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)</span> <span class="fill-blank80"></span><span class="float-left margin-Hlr5"> - </span><span class="fill-blank80"></span></span><div class="clear-both margin-V10"></div>
+                    <span class="float-left width60">Work #:</span><span class="float-left margin-H5">(&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)</span> <span class="fill-blank80"></span><span class="float-left margin-Hlr5"> - </span><span class="fill-blank80"></span></span><div class="clear-both margin-V10"></div>
+                    <span class="float-left width60">Cell #:</span><span class="float-left margin-H5">(&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)</span> <span class="fill-blank80"></span><span class="float-left margin-Hlr5"> - </span><span class="fill-blank80"></span></span><div class="clear-both margin-V10"></div>
+                    <span class="float-left width60">Email:</span><span class="fill-blank220"></span><div class="clear-both margin-V10"></div>
+                </div>
+            </section>
+            <section>
+                <span class="float-left">State:</span><span class="fill-blank220"></span><span class="float-left word-space20">Zip Code:</span><span class="fill-blank150"></span><div class="clear-both margin-V10"></div>
+                <span class="float-left">Date of Birth:</span><span class="fill-blank20"></span><span class="float-left margin-Hlr5">/</span><span class="fill-blank20"></span><span class="float-left margin-Hlr5">/</span><span class="fill-blank20"></span> <span class="float-left word-space20">Social security:</span><span class="fill-blank220"></span><div class="clear-both margin-V10"></div>
+
+                <span class="float-left">Drivers License #:</span><span class="fill-blank320"></span><div class="clear-both margin-V10"></div>
+                <span class="float-left">Occupation:</span><span class="fill-blank320"></span><span class="float-left">Employer:</span><span class="fill-blank320"></span><div class="clear-both margin-V10"></div>
+                <span class="float-left">Emergency Contact:</span><span class="fill-blank220"></span><span class="float-left">Relationship:</span><span class="fill-blank150"></span><span class="float-left">Phone:</span><span class="fill-blank150"></span><div class="clear-both margin-V10"></div>
+                <span class="float-left">How did you hear about our office?:</span><span class="fill-blank480"></span><div class="clear-both margin-V10"></div>
+
+            </section>
+            <section>
+                <h3 class="font-bold-6">MEDICAL HISTORY</h3>
+                <span class="float-left">Serious Illness or Injuries:</span><span class="fill-blank480"></span><div class="clear-both margin-V10"></div>
+                <span class="float-left">List Previous Surgery &nbsp; Date:</span><span class="fill-blank480"></span><div class="clear-both margin-V10"></div>
+                <span class="float-left">Hospitalizes, Diagnosis &nbsp; Date:</span><span class="fill-blank480"></span><div class="clear-both margin-V10"></div>
+                <span class="float-left">Allergies to Medication:</span><span class="fill-blank220"></span><span class="float-left">Current Medications:</span><span class="fill-blank220"></span><div class="clear-both margin-V10"></div>
+            </section>
+            <section class="borderBox">
+                <p>What Procedure are you interested in? (Please number according to priority):</p>
+                <div class="col24">
+                    <p><span class="fill-blank20"></span>Acne Scars</p>
+                    <p><span class="fill-blank20"></span>Sun spot removal</p>
+                    <p><span class="fill-blank20"></span>Mole removal</p>
+                    <p><span class="fill-blank20"></span>Wrinkles</p>
+                </div>
+                <div class="col24">
+                    <p><span class="fill-blank20"></span>Botox</p>
+                    <p><span class="fill-blank20"></span>Sagging (jowling)</p>
+                    <p><span class="fill-blank20"></span>Varicose veins</p>
+                    <p><span class="fill-blank20"></span>Contour thread Lift</p>
+                </div>
+                <div class="col24">
+                    <p><span class="fill-blank20"></span>Chemical peels</p>
+                    <p><span class="fill-blank20"></span>Hair loss</p>
+                    <p><span class="fill-blank20"></span>Laser tattoo removal</p>
+                    <p><span class="fill-blank20"></span>Facial vein removal</p>
+                </div>
+                <div class="col24">
+                    <p><span class="fill-blank20"></span>Laser Hair Removal</p>
+                    <p><span class="fill-blank20"></span>Liposuction</p>
+                    <p><span class="fill-blank20"></span>Eye lid Surgery</p>
+                    <p><span class="fill-blank20"></span>Plasma Resurfacing</p>
+                </div>
+            </section>
+            <section>
+                <span class="float-left">Explain anything we need to know about your health:</span><span class="fill-blank440"></span><div class="clear-both margin-V10"></div>
+            </section>
+            <section>
+                <p>When Exposed to sun/tanning beds, your reaction is best described as (please check the best answer):</p>
+                <div class="col50">
+                    <p><span class="fill-blank80"></span>Always burn/Never tan</p>
+                    <p><span class="fill-blank80"></span>Sometimes mild burn/Tan average</p>
+                    <p><span class="fill-blank80"></span>Rarely burn/Tan very easily </p>
+                </div>
+                <div class="col50">
+                    <p><span class="fill-blank80"></span>Usually burn/Tan with difficulty</p>
+                    <p><span class="fill-blank80"></span>Rarely burn/Tan with ease</p>
+                    <p><span class="fill-blank80"></span>Never burn/Tan very easily</p>
+                </div>
+            </section>
+            <section>
+                <p><span class="float-left">Have you seen a dermatologist in the past 2 years?</span><span class="fill-blank50 float-left"></span><span class="float-left margin-H5">Yes</span> <span class="fill-blank50 word-space20 float-left"></span><span class="float-left">No</span></p><div class="clear-both margin-V10"></div>
+                <p><span class="float-left">Are you currently under treatment for any condition? </span><span class="fill-blank50 float-left"></span><span class="float-left margin-H5">Yes</span> <span class="fill-blank50 word-space20 float-left"></span><span class="float-left">No</span><span class="float-left">, explain </span><span class="fill-blank150 float-left"></span></p><div class="clear-both margin-V10"></div>
+                <p><span class="float-left">Have you in the past 2 weeks been prescribed any skin creams, lotion or antibiotics? </span><span class="fill-blank50 float-left"></span><span class="float-left margin-H5">Yes</span> <span class="fill-blank50 word-space20 float-left"></span><span class="float-left">No</span></p><div class="clear-both margin-V10"></div>
+                <p><span class="float-left">Do you smoke? </span><span class="fill-blank50 float-left"></span><span class="float-left margin-H5">Yes</span> <span class="fill-blank50 word-space20 float-left"></span><span class="float-left">No, </span><span class="float-left">How much per day? </span><span class="fill-blank320"></span></p><div class="clear-both margin-V10"></div>
+                <p><span class="float-left">Do you use any drugs or alcohol socially? </span><span class="fill-blank50 float-left"></span><span class="float-left margin-H5">Yes</span> <span class="fill-blank50 word-space20 float-left"></span><span class="float-left margin-H5">No, </span> <span class="fill-blank50 float-left"></span><span class="float-left margin-H5">Daily</span><span class="fill-blank50 float-left"></span><span class="float-left margin-H5">Weekly</span><span class="fill-blank50 float-left"></span><span class="float-left margin-H5">Monthly</span></p><div class="clear-both margin-V10"></div>
+            </section>
+            <section>
+                <p><span class="float-left">Who is your primary doctor: </span><span class="fill-blank320 float-left"></span><span class="float-left margin-H5">phone #</span> <span class="fill-blank220 word-space20 float-left"></span></p><div class="clear-both margin-V10"></div>
+                <p><span class="float-left">Have you been treated for a psychological and/or psychiatric problem in the past? </span><span class="fill-blank50 float-left"></span><span class="float-left margin-H5">Yes</span> <span class="fill-blank50 word-space20 float-left"></span><span class="float-left">No</span></p><div class="clear-both margin-V10"></div>
+                <p><span class="float-left">Explain:</span><span class="fill-blank730"></span></p><div class="clear-both margin-V10"></div>
+                <p><span class="float-left">Hair Color:</span><span class="fill-blank220"></span><span class="float-left">Skin color:</span><span class="fill-blank220"></span></p><div class="clear-both margin-V10"></div>
+            </section>
+            <section>
+                <div class="clear-both margin-V40"></div>
+                <p>I certify that the above information is correct.</p><div class="clear-both margin-V20"></div>
+                <p><span class="fill-blankBT220 word-space20 float-left"></span><span style="float:left;display:inline;width:30px;">&nbsp;</span><span class="fill-blankBT220 word-space20 float-left"></span></p><div class="clear-both margin-V5"></div>
+                <p><span class="fill-blankB220 word-space20 float-left">Patient Signature</span><span style="float:left;display:inline;width:30px;">&nbsp;</span><span class="fill-blankB220 word-space20 float-left">Date</span></p><div class="clear-both margin-V10"></div>
+
+
+            </section>
+
+            <div class="footer"></div>
+
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<html>
+<head>
+    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="bower_components/weather-icons/css/weather-icons.min.css">
+    <link rel="stylesheet" href="bower_components/angular-block-ui/dist/angular-block-ui.min.css" />
+
+    <!-- end Needs images -->
+    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="stylesheet" href="styles/kendo/kendo.common.min.css">
+    <link rel="stylesheet" href="styles/kendo/kendo.default.min.css">
+</head>
+<body>
+    <div class="grid-structure">
+        <div class="divider"></div>
+        <table class="table" border="0">
+            <tbody>
+                <tr>
+                    <td width="20%"><label class="control-label">First Name</label></td>
+                    <td width="30%"><span data-ng-bind="pc.patientDetails.firstName" /></td>
+                    <td width="20%"><label class="control-label">Last Name</label></td>
+                    <td width="30%"><span data-ng-bind="pc.patientDetails.lastName" /></td>
+                </tr>
+                <tr>
+                    <td width="20%"><label class="control-label">Date</label></td>
+                    <td width="30%"><span data-ng-bind="pc.selectedProcedure.ProcedureDate" /></td>
+                    <td width="20%"><label class="control-label">Assistant</label></td>
+                    <td width="30%"><span data-ng-bind="pc.selectedProcedure.TreatmentSequenceId" /></td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table" border="0">
+            <tbody>
+                <tr>
+                    <td width="30%"><label class="control-label">Pre-Operative DX</label></td>
+                    <td width="70%"><span data-ng-bind="pc.selectedProcedure.preopdx"></td>
+                </tr>
+                <tr>
+                    <td width="30%"><label class="control-label">Post-Operative</label></td>
+                    <td width="70%"><span data-ng-bind="pc.selectedProcedure.postopdx"></td>
+                </tr>
+                <tr>
+                    <td width="30%"><label class="control-label">Procedure</label></td>
+                    <td width="70%"><span data-ng-bind="pc.selectedProcedure.procedure"></td>
+                </tr>
+                <tr>
+                    <td width="30%"><label class="control-label">Anehesia</label></td>
+                    <td width="70%"><span data-ng-bind="pc.selectedProcedure.Anehesia"></td>
+                </tr>
+                <tr>
+                    <td width="30%"><label class="control-label">History</label></td>
+                    <td width="70%"><span data-ng-bind="pc.selectedProcedure.History"></td>
+                </tr>
+                <tr>
+                    <td width="30%"><label class="control-label">Steps</label></td>
+                    <td width="70%"><textarea rows="10" class="form-control" data-ng-model="pc.selectedProcedure.Steps"></textarea></td>
+                </tr>
+                <tr>
+                    <td width="30%"><label class="control-label">Complication</label></td>
+                    <td width="70%"><textarea rows="4" class="form-control" data-ng-model="pc.selectedProcedure.Complications"></textarea></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

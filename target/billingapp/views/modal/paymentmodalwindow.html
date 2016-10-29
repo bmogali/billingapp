@@ -1,0 +1,16 @@
+﻿<div class="modal-header">
+    <h3>Payments</h3>
+</div>
+<div class="modal-body">
+    <strong>Payments posted for : </strong><span style="color: green; font-size: 14px"><strong>{{pymic.patientName}}</strong></span>
+    <div class="divider"></div>
+    <div kendo-grid="pymic.paymentdatagrid"
+         k-options="pymic.paymentgridoptions"
+         k-data-source="pymic.payments"></div>
+    <div class="divider"></div>
+    <strong>Total Payments : </strong><span style="color: green; font-size: 14px"><strong>{{pymic.totalPayments}}</strong></span>
+</div>
+<div class="modal-footer">
+    <button class="btn btn-primary" ng-click="pymic.ok()">Update</button>
+    <button class="btn btn-warning" ng-click="pymic.cancel()">Cancel</button>
+</div>

@@ -1,0 +1,73 @@
+﻿<div class="row">
+    <div class="col-lg-12 text-center text-capitalize size-h3">
+        Billing
+    </div>
+</div>
+<div class="divider"></div>
+<div kendo-grid="pc.servicedatagrid"
+     k-options="pc.servicegridoptions"
+     k-data-source="pc.patientDetails.patientBillingDetails.patientChargeDetails"></div>
+<div class="row">
+    <div class="col-lg-2 pull-left">
+        <button class="btn btn-primary btn-xs" ng-click="pc.openServiceBillingModal()"><span class="glyphicon glyphicon-edit"></span></button>
+    </div>
+    <div class="col-lg-3" style="color: blue">
+        Services {{pc.totalChargeForServices | currency}}
+    </div>
+    <div class="col-lg-3" style="color: green">
+        Paid {{pc.totalChargePaidForServices | currency}}
+    </div>
+    <div class="col-lg-3" style="color: red">
+        Balance {{pc.totalBalanceForServices | currency}}
+    </div>
+</div>
+<div kendo-grid="pc.productdatagrid"
+     k-options="pc.productgridoptions"
+     k-data-source="pc.patientDetails.patientBillingDetails.patientProductDetails"></div>
+<div class="row">
+    <div class="col-lg-2 pull-left">
+        <button class="btn btn-primary btn-xs" ng-click="pc.openProductBillingModal()"><span class="glyphicon glyphicon-edit"></span></button>
+    </div>
+    <div class="col-lg-3" style="color: blue">
+        Products : {{pc.totalChargeForProducts | currency}}
+    </div>
+    <div class="col-lg-3" style="color: green">
+        Paid : {{pc.totalChargePaidForProducts | currency}}
+    </div>
+    <div class="col-lg-3" style="color: red">
+        Balance : {{pc.totalBalanceForProducts | currency}}
+    </div>
+</div>
+<div kendo-grid="pc.paymentdatagrid"
+     k-options="pc.paymentgridoptions"
+     k-data-source="pc.patientDetails.patientBillingDetails.patientPaymentDetails"></div>  
+<div class="row">
+    <div class="col-lg-2 pull-left">
+        <button class="btn btn-primary btn-xs" ng-click="pc.openPaymentModal()"><span class="glyphicon glyphicon-edit"></span></button>
+    </div>
+    <div class="col-lg-3" style="color: green">
+        Services : {{pc.totalChargeForServices | currency}}
+    </div>
+    <div class="col-lg-3" style="color: green">
+        Products : {{pc.totalChargeForProducts | currency}}
+    </div>
+    <div class="col-lg-3" style="color: green">
+        Total Paid : {{pc.totalChargePaid | currency}}
+    </div>
+</div>
+<hr/>
+<div class="row">
+    <div class="col-lg-2 pull-left">
+        <button class="btn btn-primary btn-xs" ng-click="pc.printInvoice()"><span class="glyphicon glyphicon-print"></span></button>
+        <button class="btn btn-primary btn-xs" ng-click="pc.openEstimateModal()"><span class="glyphicon glyphicon-calendar"></span></button>
+    </div>
+    <div class="col-lg-3" style="color: blue">
+        Charges : {{pc.totalCharge | currency}}
+    </div>
+    <div class="col-lg-3" style="color: green">
+        Payments : {{pc.totalChargePaid | currency}}
+    </div>
+    <div class="col-lg-3" style="color: red">
+        Balance : {{pc.totalBalance | currency}}
+    </div>
+</div>

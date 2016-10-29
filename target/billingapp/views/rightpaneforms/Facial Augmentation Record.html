@@ -1,0 +1,93 @@
+<div class="grid-structure">
+    <table class="table" border="0">
+        <tbody>
+            <tr>
+                <td width="11%" style="vertical-align:middle"></td>
+                <td width="11%" style="vertical-align:middle"></td>
+                <td width="56%" style="text-align:center"><span ng-bind="pc.selectedProcedureName" class="text-center text-capitalize size-h3" style="vertical-align:top"></span></td>
+                <td width="11%" style="vertical-align:middle"><button class="btn btn-warning btn-xs" ng-click="pc.updateProcedure()"><span class="glyphicon glyphicon-open"></span> Update</button></td>
+                <td width="11%" style="vertical-align:middle"><button class="btn btn-danger btn-xs" style="margin-right:10px;" ng-click="pc.deleteProcedure()"><span class="glyphicon glyphicon-trash"></span> Delete</button></td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="divider"></div>
+    <table class="table" border="0">
+        <tbody>
+            <tr>
+                <td width="20%"><label class="control-label">First Name</label></td>
+                <td width="30%"><input type="text" class="form-control" data-ng-model="pc.patientDetails.firstName"></td>
+                <td width="20%"><label class="control-label">Last Name</label></td>
+                <td width="30%"><input type="text" class="form-control" data-ng-model="pc.patientDetails.lastName"></td>
+            </tr>
+            <tr>
+                <td width="20%"><label class="control-label">Date</label></td>
+                <td width="30%"><input kendo-date-picker k-format="'MM-dd-yyyy'" style="width: 100%" data-ng-model="pc.selectedProcedure.ProcedureDate" /></td>
+                <td width="20%"><label class="control-label">Session #</label></td>
+                <td width="30%"><input type="text" class="form-control" data-ng-model="pc.selectedProcedure.TreatmentSequenceId"></td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table" border="0">
+        <tbody>
+            <tr>
+                <td width="25%"><label class="control-label">Prior treatment complication ?</label></td>
+                <td width="5%"><input type="checkbox" data-ng-model="pc.selectedProcedure.PriorComplication"></td>
+                <td width="50%"><input type="text" class="form-control" data-ng-model="pc.selectedProcedure.ComplicationDescription"></td>
+            </tr>
+        </tbody>
+    </table>
+    <fieldset class="scheduler-border" style="width: 400px;">
+        <legend class="scheduler-border">Agent</legend>
+        <table class="table" border="0">
+            <tbody>
+                <tr>
+                    <td width="50%"><input type="checkbox" data-ng-model="pc.selectedProcedure.blue"> Resylane</td>
+                    <td width="50%"><input type="checkbox" data-ng-model="pc.selectedProcedure.clear"> Juvederm</td>
+                </tr>
+            </tbody>
+        </table>
+    </fieldset>
+    <div class="divider"></div>
+    <table class="table" border="0">
+        <tbody>
+            <tr>
+                <td width="20%"><label class="control-label">Lot</label></td>
+                <td width="30%"><input kendo-date-picker k-format="'MM-dd-yyyy'" style="width: 100%" data-ng-model="pc.selectedProcedure.Lot" /></td>
+                <td width="20%"><label class="control-label">Exp</label></td>
+                <td width="30%"><input type="text" width="10" class="form-control" data-ng-model="pc.selectedProcedure.ExpDate"></td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="divider"></div>
+    <fieldset class="scheduler-border" style="width: 400px">
+        <legend class="scheduler-border">Treated Area (ml)</legend>
+        <table class="table" border="0">
+            <tbody>
+                <tr>
+                    <td width="15%"><input type="checkbox" data-ng-model="pc.selectedProcedure.UpperLip"> Upper Lip</td>
+                    <td width="15%"><input type="text" class="form-control" data-ng-model="pc.selectedProcedure.upperlipml"></td>
+                </tr>
+                <tr>
+                    <td width="15%"><input type="checkbox" data-ng-model="pc.selectedProcedure.lowerlipyn"> Lower Lip</td>
+                    <td width="15%"><input type="text" class="form-control" data-ng-model="pc.selectedProcedure.lowerlipml"></td>
+                </tr>
+                <tr>
+                    <td width="15%"><input type="checkbox" data-ng-model="pc.selectedProcedure.nasalfoldyn"> Nesolabial Fold</td>
+                    <td width="15%"><input type="text" class="form-control" data-ng-model="pc.selectedProcedure.nasalfoldml"></td>
+                </tr>
+                <tr>
+                    <td width="15%"><input type="checkbox" data-ng-model="pc.selectedProcedure.cheekyn"> Cheek</td>
+                    <td width="15%"><input type="text" class="form-control" data-ng-model="pc.selectedProcedure.cheekml"></td>
+                </tr>
+                <tr>
+                    <td width="15%"><input type="checkbox" data-ng-model="pc.selectedProcedure.MelomentFoldyn"> Melomental Fold</td>
+                    <td width="15%"><input type="text" class="form-control" data-ng-model="pc.selectedProcedure.MelomentFoldml"></td>
+                </tr>
+                <tr>
+                    <td width="15%"><input type="checkbox" data-ng-model="pc.selectedProcedure.OtherArea"> Other Area</td>
+                    <td width="15%"><input type="text" class="form-control" data-ng-model="pc.selectedProcedure.otherml"></td>
+                </tr>
+            </tbody>
+        </table>
+    </fieldset>
+</div>

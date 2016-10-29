@@ -1,0 +1,168 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <title>MegaPeel Microdermabrasion Procedure Form</title>
+    <!--[if lt IE 9]>
+    <script src="js/html5.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="styles/print-bootstrap.css" />
+    <link rel="stylesheet" href="styles/print-bootstrap-theme.css" />
+    <link rel="stylesheet" href="styles/print.css" />
+</head>
+<body>
+    <div class="mainouterbox">
+        <div class="container-fluid">
+            <form method="post" action="">
+                <header class="container-fluid">
+                    <div class="logodcbox"><img src="images/dc-logo.jpg" alt="" /></div>
+                    <div class="formtitlebox">
+                        <hgroup>
+                            <h2>Derma Laser Centers</h2>
+                            <h3>MegaPeel Microdermabrasion Procedure Form</h3>
+                        </hgroup>
+                    </div>
+                </header>
+                <section class="container-fluid margin-T20">
+                    <div class="col-lg-6 margin-T10">
+                        <label class="level-3">Name</label><span class="fieldvalueBox fieldvalueBox4 text-left" data-ng-bind="pc.patientFullName"></span>
+                    </div>
+                    <div class="col-lg-6 margin-T10">
+                        <label class="level2-2">Date Of Birth</label><span class="fieldvalueBox fieldvalueBox2 text-right" data-ng-bind="pc.patientDetails.dob"></span>
+                    </div>
+                    <div class="col-lg-6 margin-T10">
+                        <label class="level-3">Date</label><span class="fieldvalueBox fieldvalueBox1 text-left" data-ng-bind="pc.formatDate(pc.selectedProcedure.ProcedureDate)"></span>
+                    </div>
+                    <div class="col-lg-6 margin-T10">
+                        <label class="level2-2">Treatment Session Number</label><span class="fieldvalueBox fieldvalueBox2 text-right" data-ng-bind="pc.selectedProcedure.TreatmentSequenceId"></span>
+                    </div>
+                </section>
+                <section class="container-fluid">
+                    <table class="table" border="0">
+                        <tbody>
+                            <tr>
+                                <td width="25%"><label class="control-label">Skin Type</label></td>
+                                <td width="25%"><input type="checkbox" data-ng-checked="pc.selectedProcedure.Dry"> Dry</td>
+                                <td width="25%"><input type="checkbox" data-ng-checked="pc.selectedProcedure.Normal"> Normal</td>
+                                <td width="25%"><input type="checkbox" data-ng-checked="pc.selectedProcedure.Oily"> Oily</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table" border="0">
+                        <tbody>
+                            <tr>
+                                <td width="50%"><label class="control-label">Cleansed client's skin with</label></td>
+                                <td width="50%"><span class="fieldvalueBox text-left" data-ng-bind="pc.selectedProcedure.CleansedWith"></span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table" border="0">
+                        <tbody>
+                            <tr>
+                                <td width="50%"><label class="control-label">Prepared client's skin with</label></td>
+                                <td width="25%"><input type="checkbox" data-ng-checked="pc.selectedProcedure.PrepPad"> Pre-Pad</td>
+                                <td width="25%"><input type="checkbox" data-ng-checked="pc.selectedProcedure.Solution"> Solution</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table" border="0">
+                        <tbody>
+                            <tr>
+                                <td width="25%"><label class="control-label">Allowed skin to</label></td>
+                                <td width="25%"><input type="checkbox" data-ng-checked="pc.selectedProcedure.AirDry"> Air Dry</td>
+                                <td width="25%"><input type="checkbox" data-ng-checked="pc.selectedProcedure.FanDry"> Fan Dry</td>
+                                <td width="25%"><input type="checkbox" data-ng-checked="pc.selectedProcedure.ClothDry"> Cloth Dry</td>
+                            </tr>
+                            <tr>
+                                <td width="25%"><label class="control-label">Determined tip to be used</label></td>
+                                <td width="25%"><input type="checkbox" data-ng-checked="pc.selectedProcedure.Amber"> Amber</td>
+                                <td width="25%"><input type="checkbox" data-ng-checked="pc.selectedProcedure.Blue"> Blue</td>
+                                <td width="25%"><input type="checkbox" data-ng-checked="pc.selectedProcedure.Clear"> Clear</td>
+                            </tr>
+                            <tr>
+                                <td width="25%" colspan="2"><label class="control-label">Determined the hand piece to be used</label></td>
+                                <td width="25%"><input type="checkbox" data-ng-checked="pc.selectedProcedure.Gold"> Gold</td>
+                                <td width="25%"><input type="checkbox" data-ng-checked="pc.selectedProcedure.Silver"> Silver</td>
+                            </tr>
+                            <tr>
+                                <td colspan="4">
+                                    <label class="control-label">Determined the vaccum power by occluding the tip - vaccum power used</label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="25%"></td>
+                                <td width="25%"><input type="checkbox" data-ng-checked="pc.selectedProcedure.Vac25"> 25</td>
+                                <td width="25%"><input type="checkbox" data-ng-checked="pc.selectedProcedure.Vac30"> 30</td>
+                                <td width="25%"><input type="checkbox" data-ng-checked="pc.selectedProcedure.Vac35"> 35</td>
+                            </tr>
+                            <tr>
+                                <td width="25%"></td>
+                                <td width="25%"><input type="checkbox" data-ng-checked="pc.selectedProcedure.Vac40"> 40</td>
+                                <td width="25%"><input type="checkbox" data-ng-checked="pc.selectedProcedure.Vac45"> 45</td>
+                                <td width="25%"><input type="checkbox" data-ng-checked="pc.selectedProcedure.Vac50"> 50</td>
+                            </tr>
+                            <tr>
+                                <td colspan="4">
+                                    <label class="control-label">Determined the crystal flow by turning the crystal regulating knob this many revolutions down from full crystal flow</label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="25%"></td>
+                                <td width="25%"><input type="checkbox" data-ng-checked="pc.selectedProcedure.knob20"> 20</td>
+                                <td width="25%"><input type="checkbox" data-ng-checked="pc.selectedProcedure.knob30"> 30</td>
+                                <td width="25%"><input type="checkbox" data-ng-checked="pc.selectedProcedure.knob40"> 40</td>
+                            </tr>
+                            <tr>
+                                <td width="25%"></td>
+                                <td width="25%"><input type="checkbox" data-ng-checked="pc.selectedProcedure.knob50"> 50</td>
+                                <td width="25%"></td>
+                                <td width="25%"></td>
+                            </tr>
+                            <tr>
+                                <td colspan="4">
+                                    <label class="control-label">Tested vacuum power on client's mid forehead - results</label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="25%"></td>
+                                <td width="25%"><input type="checkbox" data-ng-checked="pc.selectedProcedure.ForheadNormal"> Normal</td>
+                                <td width="25%"><input type="checkbox" data-ng-checked="pc.selectedProcedure.ForheadSensitive"> Sensitive</td>
+                                <td width="25%"><input type="checkbox" data-ng-checked="pc.selectedProcedure.ForheadRedness"> Redness</td>
+                            </tr>
+                            <tr>
+                                <td width="25%"></td>
+                                <td width="25%"><input type="checkbox" data-ng-checked="pc.selectedProcedure.ForheadPetechiae"> Petechiae(pin point bleeding)</td>
+                                <td width="25%"><input type="checkbox" data-ng-checked="pc.selectedProcedure.ForheadExcoriation"> Excoriation(scratch)</td>
+                                <td width="25%"><input type="checkbox" data-ng-checked="pc.selectedProcedure.ForheadNone"> None</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <span class="clear"></span>
+                    Proceeded with microdermabrasion (Use facial chart to record vacuum power, crystal flow, hand piece, and tip used.) Right forehead, left forehead, right temple area, left temple area, right cheek area, left cheek area, nose, chin, making two passes in opposite directions.  Turned the vacuum power down to ________ to microdemabrade the right eye area, left eye area, right side of neck, mid-neck, and left side of neck.
+                    <span class="clear"></span>
+                    <br />
+                    <b>Post microdermabrasion treatment</b>
+                    <span class="clear"></span>
+                    <br />
+                    <ul>
+                        <li>Removed excess crystal residue</li>
+                        <li>Sprayed with mineral water or wiped with damp cotton</li>
+                        <li>Cleansed with ___________________________(name of product)</li>
+                        <li>Applied 1% Hydrocortisone (if skin appeared very irritated)</li>
+                        <li>Moisturized with ___________________________(name of product)</li>
+                        <li>Applied sunblock of  ______ SPF</li>
+                        <li>Handed client written post treatment protocol</li>
+                    </ul>
+                    <span class="clear"></span>
+                    <br />
+                    Attach a copy of post treatment protocol
+                    <span class="clear"></span>
+                    <br />
+                    <b>Note: The above is to be used as a guideline.  Post microdermabrasion treatment should be reviewed by the physician or aesthetician.</b>
+                </section>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

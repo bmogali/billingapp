@@ -1,0 +1,76 @@
+<div class="grid-structure">
+    <table class="table" border="0">
+        <tbody>
+            <tr>
+                <td width="11%" style="vertical-align:middle"></td>
+                <td width="11%" style="vertical-align:middle"></td>
+                <td width="56%" style="text-align:center"><span ng-bind="pc.selectedProcedureName" class="text-center text-capitalize size-h3" style="vertical-align:top"></span></td>
+                <td width="11%" style="vertical-align:middle"><button class="btn btn-warning btn-xs" ng-click="pc.updateProcedure()"><span class="glyphicon glyphicon-open"></span> Update</button></td>
+                <td width="11%" style="vertical-align:middle"><button class="btn btn-danger btn-xs" style="margin-right:10px;" ng-click="pc.deleteProcedure()"><span class="glyphicon glyphicon-trash"></span> Delete</button></td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="divider"></div>
+    <table class="table" border="0">
+        <tbody>
+            <tr>
+                <td width="20%"><label class="control-label">First Name</label></td>
+                <td width="30%"><input type="text" class="form-control" data-ng-model="pc.patientDetails.firstName"></td>
+                <td width="20%"><label class="control-label">Last Name</label></td>
+                <td width="30%"><input type="text" class="form-control" data-ng-model="pc.patientDetails.lastName"></td>
+            </tr>
+            <tr>
+                <td width="20%"><label class="control-label">Date</label></td>
+                <td width="30%"><input kendo-date-picker k-format="'MM-dd-yyyy'" style="width: 100%" data-ng-model="pc.selectedProcedure.ProcedureDate" /></td>
+                <td width="20%"><label class="control-label">Session #</label></td>
+                <td width="30%"><input type="text" class="form-control" data-ng-model="pc.selectedProcedure.TreatmentSequenceId"></td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table" border="0">
+        <tbody>
+            <tr>
+                <td width="25%"><label class="control-label">Prior treatment complication ?</label></td>
+                <td width="5%"><input type="checkbox" data-ng-model="pc.selectedProcedure.PriorComplication"></td>
+                <td width="50%"><input type="text" class="form-control" data-ng-model="pc.selectedProcedure.ComplicationDescription"></td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table" border="0">
+        <tbody>
+            <tr>
+                <td width="20%"><label class="control-label">Treated Area</label></td>
+                <td width="20%"><input type="checkbox" data-ng-model="pc.selectedProcedure.Face"> Face</td>
+                <td width="20%"><input type="checkbox" data-ng-model="pc.selectedProcedure.OtherArea"> Other Area</td>
+                <td width="40%"><input type="text" class="form-control" data-ng-model="pc.selectedProcedure.OtherAreaDescription"></td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table" border="0">
+        <tbody>
+            <tr>
+                <td width="20%"><label class="control-label">Energy</label></td>
+                <td width="20%"><input type="checkbox" data-ng-model="pc.selectedProcedure.Energy25"> 1</td>
+                <td width="20%"><input type="checkbox" data-ng-model="pc.selectedProcedure.Energy30"> 1.2</td>
+                <td width="20%"><input type="checkbox" data-ng-model="pc.selectedProcedure.Energy40"> 1.5</td>
+                <td width="20%"><input type="checkbox" data-ng-model="pc.selectedProcedure.Energy45"> 1.8</td>
+            </tr>
+            <tr>
+                <td width="20%"></td>
+                <td width="20%"><input type="checkbox" data-ng-model="pc.selectedProcedure.PPS1"> 2</td>
+                <td width="20%"><input type="checkbox" data-ng-model="pc.selectedProcedure.PPS15"> 2.5</td>
+                <td width="20%"><input type="checkbox" data-ng-model="pc.selectedProcedure.SpotSize7"> 3</td>
+                <td width="20%"><input type="checkbox" data-ng-model="pc.selectedProcedure.SpotSize10"> 3.2</td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table" border="0">
+        <tbody>
+            <tr>
+                <td width="20%"><label class="control-label">Pulses</label></td>
+                <td width="40%"><input type="text" class="form-control" data-ng-model="pc.selectedProcedure.NumberofPulses" /></td>
+                <td width="40%"></td>
+            </tr>
+        </tbody>
+    </table>    
+</div>

@@ -1,0 +1,96 @@
+<html>
+<head>
+    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="bower_components/weather-icons/css/weather-icons.min.css">
+    <link rel="stylesheet" href="bower_components/angular-block-ui/dist/angular-block-ui.min.css" />
+
+    <!-- end Needs images -->
+    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="stylesheet" href="styles/kendo/kendo.common.min.css">
+    <link rel="stylesheet" href="styles/kendo/kendo.default.min.css">
+</head>
+<body>
+    <div class="grid-structure">
+        <div class="divider"></div>
+        <table class="table" border="0">
+            <tbody>
+                <tr>
+                    <td width="20%"><label class="control-label">First Name</label></td>
+                    <td width="30%"><span data-ng-bind="pc.patientDetails.firstName" /></td>
+                    <td width="20%"><label class="control-label">Last Name</label></td>
+                    <td width="30%"><span data-ng-bind="pc.patientDetails.lastName" /></td>
+                </tr>
+                <tr>
+                    <td width="20%"><label class="control-label">Date</label></td>
+                    <td width="30%"><span data-ng-bind="pc.selectedProcedure.ProcedureDate" /></td>
+                    <td width="20%"><label class="control-label">Session #</label></td>
+                    <td width="30%"><span data-ng-bind="pc.selectedProcedure.TreatmentSequenceId" /></td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table" border="0">
+            <tbody>
+                <tr>
+                    <td width="25%"><label class="control-label">Prior treatment complication ?</label></td>
+                    <td width="5%"><input type="checkbox" data-ng-checked="pc.selectedProcedure.PriorComplication"></td>
+                    <td width="50%"><span data-ng-bind="pc.selectedProcedure.ComplicationDescription"></td>
+                </tr>
+            </tbody>
+        </table>
+        <fieldset class="scheduler-border" style="width: 400px;">
+            <legend class="scheduler-border">Agent</legend>
+            <table class="table" border="0">
+                <tbody>
+                    <tr>
+                        <td width="50%"><input type="checkbox" data-ng-checked="pc.selectedProcedure.blue"> Resylane</td>
+                        <td width="50%"><input type="checkbox" data-ng-checked="pc.selectedProcedure.clear"> Juvederm</td>
+                    </tr>
+                </tbody>
+            </table>
+        </fieldset>
+        <div class="divider"></div>
+        <table class="table" border="0">
+            <tbody>
+                <tr>
+                    <td width="20%"><label class="control-label">Lot</label></td>
+                    <td width="30%"><input kendo-date-picker k-format="'MM-dd-yyyy'" style="width: 100%" data-ng-model="pc.selectedProcedure.Lot" /></td>
+                    <td width="20%"><label class="control-label">Exp</label></td>
+                    <td width="30%"><input type="text" width="10" class="form-control" data-ng-model="pc.selectedProcedure.ExpDate"></td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="divider"></div>
+        <fieldset class="scheduler-border" style="width: 400px">
+            <legend class="scheduler-border">Treated Area (ml)</legend>
+            <table class="table" border="0">
+                <tbody>
+                    <tr>
+                        <td width="15%"><input type="checkbox" data-ng-checked="pc.selectedProcedure.UpperLip"> Upper Lip</td>
+                        <td width="15%"><span data-ng-bind="pc.selectedProcedure.upperlipml"></td>
+                    </tr>
+                    <tr>
+                        <td width="15%"><input type="checkbox" data-ng-checked="pc.selectedProcedure.lowerlipyn"> Lower Lip</td>
+                        <td width="15%"><span data-ng-bind="pc.selectedProcedure.lowerlipml"></td>
+                    </tr>
+                    <tr>
+                        <td width="15%"><input type="checkbox" data-ng-checked="pc.selectedProcedure.nasalfoldyn"> Nesolabial Fold</td>
+                        <td width="15%"><span data-ng-bind="pc.selectedProcedure.nasalfoldml"></td>
+                    </tr>
+                    <tr>
+                        <td width="15%"><input type="checkbox" data-ng-checked="pc.selectedProcedure.cheekyn"> Cheek</td>
+                        <td width="15%"><span data-ng-bind="pc.selectedProcedure.cheekml"></td>
+                    </tr>
+                    <tr>
+                        <td width="15%"><input type="checkbox" data-ng-checked="pc.selectedProcedure.MelomentFoldyn"> Melomental Fold</td>
+                        <td width="15%"><span data-ng-bind="pc.selectedProcedure.MelomentFoldml"></td>
+                    </tr>
+                    <tr>
+                        <td width="15%"><input type="checkbox" data-ng-checked="pc.selectedProcedure.OtherArea"> Other Area</td>
+                        <td width="15%"><span data-ng-bind="pc.selectedProcedure.otherml"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </fieldset>
+    </div>
+</body>
+</html>

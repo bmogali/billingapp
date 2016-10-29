@@ -1,0 +1,102 @@
+﻿<div class="grid-structure">
+    <div class="row">
+        <div class="col-lg-12">
+            <div ng-include="'views/tabs/patientInfoTab.html'"></div>
+        </div>
+    </div>
+    <div class="divider"></div>
+    <table class="table" border="0">
+        <tbody>
+            <tr>
+                <td width="5%"></td>
+                <td width="25%"><label class="control-label">Employer</label></td>
+                <td width="50%"><input type="text" class="form-control" data-ng-model="pc.patientDetails.employer"></td>
+                <td width="10%"></td>
+            </tr>
+            <tr>
+                <td width="5%"></td>
+                <td width="25%"><label class="control-label">Work Address</label></td>
+                <td width="50%"><textarea rows="3" class="form-control" data-ng-model="pc.patientDetails.workAddress"></textarea></td>
+                <td width="10%"></td>
+            </tr>
+            <tr>
+                <td width="5%"></td>
+                <td width="25%"><label class="control-label">Work Phone</label></td>
+                <td width="50%"><input type="text" class="form-control" data-ng-model="pc.patientDetails.workPhone"></td>
+                <td width="10%"></td>
+            </tr>
+            <tr>
+                <td width="5%"></td>
+                <td width="25%"><label class="control-label">Work City</label></td>
+                <td width="50%"><input type="text" class="form-control" data-ng-model="pc.patientDetails.workCity"></td>
+                <td width="10%"></td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table" border="0">
+        <tbody>
+            <tr>
+                <td width="5%"></td>
+                <td width="25%"><label class="control-label">Work State</label></td>
+                <td width="20%"><input type="text" class="form-control" data-ng-model="pc.patientDetails.workState"></td>
+                <td width="10%"><label class="control-label">Zip</label></td>
+                <td width="20%"><input type="text" class="form-control" data-ng-model="pc.patientDetails.workZip"></td>
+                <td width="10%"></td>
+            </tr>
+        </tbody>
+    </table>
+    <hr/>
+    <h5>Primary Insurance</h5>
+    <table class="table" border="0">
+        <tbody>
+            <tr>
+                <td width="25%"><label class="control-label">Primary Insurance</label></td>
+                <td width="25%"><input type="text" class="form-control" data-ng-model="pc.patientDetails.primaryInsurance"></td>
+                <td width="25%"><label class="control-label">Plan</label></td>
+                <td width="25%"><input type="text" class="form-control" data-ng-model="pc.patientDetails.primaryPlan"></td>
+            </tr>
+            <tr>
+                <td width="25%"><label class="control-label">Subscriber Name</label></td>
+                <td width="25%"><input type="text" class="form-control" data-ng-model="pc.patientDetails.primarySusbscriberName"></td>
+                <td width="25%"><label class="control-label">Relation Subscription</label></td>
+                <td width="25%"><input type="text" class="form-control" data-ng-model="pc.patientDetails.primaryPatientRelationshiptoSubsc"></td>
+            </tr>
+            <tr>
+                <td width="25%"><label class="control-label">Policy Id</label></td>
+                <td width="25%"><input type="text" class="form-control" data-ng-model="pc.patientDetails.primaryPolicyId"></td>
+                <td width="25%"><label class="control-label">Group Number</label></td>
+                <td width="25%"><input type="text" class="form-control" data-ng-model="pc.patientDetails.primaryGroupNumber"></td>
+            </tr>
+        </tbody>
+    </table>
+    <hr />
+    <h5>Secondary Insurance</h5>
+    <table class="table" border="0">
+        <tbody>
+            <tr>
+                <td width="25%"><label class="control-label">Secondary Insurance</label></td>
+                <td width="25%"><input type="text" class="form-control" data-ng-model="pc.patientDetails.secondaryInsurance"></td>
+                <td width="25%"><label class="control-label">Plan</label></td>
+                <td width="25%"><input type="text" class="form-control" data-ng-model="pc.patientDetails.secondaryPlan"></td>
+            </tr>
+            <tr>
+                <td width="25%"><label class="control-label">Subscriber Name</label></td>
+                <td width="25%"><input type="text" class="form-control" data-ng-model="pc.patientDetails.secondarySusbscriberName"></td>
+                <td width="25%"><label class="control-label">Relation Subscription</label></td>
+                <td width="25%"><input type="text" class="form-control" data-ng-model="pc.patientDetails.secondaryPatientRelationshiptoSubsc"></td>
+            </tr>
+            <tr>
+                <td width="25%"><label class="control-label">Policy Id</label></td>
+                <td width="25%"><input type="text" class="form-control" data-ng-model="pc.patientDetails.secondaryPolicyId"></td>
+                <td width="25%"><label class="control-label">Group Number</label></td>
+                <td width="25%"><input type="text" class="form-control" data-ng-model="pc.patientDetails.secondaryGroupNumber"></td>
+            </tr>
+            <tr>
+                <td width="25%"><label class="control-label">Other Insurance</label></td>
+                <td width="25%"><input type="text" class="form-control" data-ng-model="pc.patientDetails.otherInsurance"></td>
+                <td width="25%"></td>
+                <td width="25%"></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

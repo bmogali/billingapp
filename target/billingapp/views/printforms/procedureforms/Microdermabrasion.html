@@ -1,0 +1,107 @@
+﻿<html>
+<head>
+    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="bower_components/weather-icons/css/weather-icons.min.css">
+    <link rel="stylesheet" href="bower_components/angular-block-ui/dist/angular-block-ui.min.css" />
+
+    <!-- end Needs images -->
+    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="stylesheet" href="styles/kendo/kendo.common.min.css">
+    <link rel="stylesheet" href="styles/kendo/kendo.default.min.css">
+</head>
+<body>
+    <div class="grid-structure">
+        <div class="divider"></div>
+        <table class="table" border="0">
+            <tbody>
+                <tr>
+                    <td width="20%"><label class="control-label">First Name</label></td>
+                    <td width="30%"><span data-ng-bind="pc.patientDetails.firstName" /></td>
+                    <td width="20%"><label class="control-label">Last Name</label></td>
+                    <td width="30%"><span data-ng-bind="pc.patientDetails.lastName" /></td>
+                </tr>
+                <tr>
+                    <td width="20%"><label class="control-label">Date</label></td>
+                    <td width="30%"><span data-ng-bind="pc.selectedProcedure.ProcedureDate" /></td>
+                    <td width="20%"><label class="control-label">Session #</label></td>
+                    <td width="30%"><span data-ng-bind="pc.selectedProcedure.TreatmentSequenceId" /></td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table" border="0">
+            <tbody>
+                <tr>
+                    <td width="25%"><label class="control-label">Cleansed client's skin with</label></td>
+                    <td width="75%"><span data-ng-bind="pc.selectedProcedure.Dry" /></td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table" border="0">
+            <tbody>
+                <tr>
+                    <td width="25%"><label class="control-label">Prepared client's skin with</label></td>
+                    <td width="25%"></td>
+                    <td width="25%"><input type="checkbox" data-ng-checked="pc.selectedProcedure.normal"> Pre-Pad</td>
+                    <td width="25%"><input type="checkbox" data-ng-checked="pc.selectedProcedure.oily"> Solution</td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table" border="0">
+            <tbody>
+                <tr>
+                    <td width="25%"><label class="control-label">Skin Type</label></td>
+                    <td width="25%"><input type="checkbox" data-ng-checked="pc.selectedProcedure.dry"> Dry</td>
+                    <td width="25%"><input type="checkbox" data-ng-checked="pc.selectedProcedure.normal"> Normal</td>
+                    <td width="25%"><input type="checkbox" data-ng-checked="pc.selectedProcedure.oily"> Oily</td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table" border="0">
+            <tbody>
+                <tr>
+                    <td width="25%"><label class="control-label">Allowed skin to</label></td>
+                    <td width="25%"><input type="checkbox" data-ng-checked="pc.selectedProcedure.airDry == true"> Air Dry</td>
+                    <td width="25%"><input type="checkbox" data-ng-checked="pc.selectedProcedure.fanDry"> Fan Dry</td>
+                    <td width="25%"><input type="checkbox" data-ng-checked="pc.selectedProcedure.clothDry"> Cloth Dry</td>
+                </tr>
+                <tr>
+                    <td width="25%"><label class="control-label">Determine tip to be used</label></td>
+                    <td width="25%"><input type="checkbox" data-ng-checked="pc.selectedProcedure.amber"> Amber</td>
+                    <td width="25%"><input type="checkbox" data-ng-checked="pc.selectedProcedure.blue"> Blue</td>
+                    <td width="25%"><input type="checkbox" data-ng-checked="pc.selectedProcedure.clear"> Clear</td>
+                </tr>
+                <tr>
+                    <td width="25%"><label class="control-label">Vaccum power used</label></td>
+                    <td width="25%"><input type="checkbox" data-ng-checked="pc.selectedProcedure.amber"> 25</td>
+                    <td width="25%"><input type="checkbox" data-ng-checked="pc.selectedProcedure.blue"> 30</td>
+                    <td width="25%"><input type="checkbox" data-ng-checked="pc.selectedProcedure.clear"> 35</td>
+                </tr>
+                <tr>
+                    <td width="25%"></td>
+                    <td width="25%"><input type="checkbox" data-ng-checked="pc.selectedProcedure.amber"> 40</td>
+                    <td width="25%"><input type="checkbox" data-ng-checked="pc.selectedProcedure.blue"> 45</td>
+                    <td width="25%"><input type="checkbox" data-ng-checked="pc.selectedProcedure.clear"> 50</td>
+                </tr>
+                <tr>
+                    <td width="25%"><label class="control-label">Knob revolutions</label> <input type="checkbox" data-ng-checked="pc.selectedProcedure.airDry"> 20</td>
+                    <td width="25%"><input type="checkbox" data-ng-checked="pc.selectedProcedure.airDry"> 30</td>
+                    <td width="25%"><input type="checkbox" data-ng-checked="pc.selectedProcedure.fanDry"> 40</td>
+                    <td width="25%"><input type="checkbox" data-ng-checked="pc.selectedProcedure.clothDry"> 50</td>
+                </tr>
+                <tr>
+                    <td width="25%"><label class="control-label">Forhead test results</label></td>
+                    <td width="25%"><input type="checkbox" data-ng-checked="pc.selectedProcedure.amber"> Normal</td>
+                    <td width="25%"><input type="checkbox" data-ng-checked="pc.selectedProcedure.blue"> Sensitive</td>
+                    <td width="25%"><input type="checkbox" data-ng-checked="pc.selectedProcedure.clear"> Redness</td>
+                </tr>
+                <tr>
+                    <td width="25%"></td>
+                    <td width="25%"><input type="checkbox" data-ng-checked="pc.selectedProcedure.amber"> Petechiae(pin point bleeding)</td>
+                    <td width="25%"><input type="checkbox" data-ng-checked="pc.selectedProcedure.blue"> Excoriation(scratch)</td>
+                    <td width="25%"><input type="checkbox" data-ng-checked="pc.selectedProcedure.clear"> None</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

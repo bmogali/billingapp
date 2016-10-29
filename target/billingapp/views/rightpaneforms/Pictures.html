@@ -1,0 +1,53 @@
+﻿<div class="grid-structure">
+    <div class="row">
+        <div class="col-lg-12">
+            <div ng-include="'views/tabs/patientInfoTab.html'"></div>
+        </div>
+    </div>
+    <div class="divider"></div>
+    <div class="row">
+        <div class="col-lg-12">
+            <div kendo-grid="pc.picturesdatagrid"
+                 k-options="pc.picturesgridoptions"
+                 k-data-source="pc.patientDetails.pictures"></div>
+        </div>
+    </div>
+    <div class="divider"></div>
+    <div class="row">
+        <div class="col-lg-4">
+            <input id="uploadedfile" type="file" name="uploadedfile" file-model="pc.imageFile" /><br />
+        </div>
+    </div>
+    <div class="row" ng-show="pc.imageFile != ''">
+        <div class="col-lg-2">
+            Description :
+        </div>
+        <div class="col-lg-4">
+            <input type="text" class="form-control" ng-model="pc.imageDescription">
+        </div>
+    </div>
+    <div class="divider"></div>
+    <div class="row" ng-show="pc.imageFile != ''">
+        <div class="col-lg-2">
+            File Name :
+        </div>
+        <div class="col-lg-4">
+            <input type="text" class="form-control" ng-model="pc.imagefileName">
+        </div>
+    </div>
+    <div class="divider"></div>
+    <div class="row" ng-show="pc.imageFile != ''">
+        <div class="col-lg-2">
+            Is Profile Image :
+        </div>
+        <div class="col-lg-4">
+            <input type="checkbox" class="form-control" ng-model="pc.isProfileImage">
+        </div>
+    </div>
+    <div class="divider"></div>
+    <div class="row" ng-show="pc.imageFile != ''">
+        <div class="col-lg-4">
+            <button class="btn btn-primary btn-xs" ng-click="pc.uploadImage()" ng-disabled="pc.imageDescription == '' || pc.imagefileName == ''"> <span class="glyphicon glyphicon-upload"> </span> Upload</button>
+        </div>
+    </div>
+</div>

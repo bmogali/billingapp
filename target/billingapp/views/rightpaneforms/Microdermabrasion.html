@@ -1,0 +1,109 @@
+﻿<div class="grid-structure">
+    <table class="table" border="0">
+        <tbody>
+            <tr>
+                <td width="11%" style="vertical-align:middle"></td>
+                <td width="11%" style="vertical-align:middle"></td>
+                <td width="56%" style="text-align:center"><span ng-bind="pc.selectedProcedureName" class="text-center text-capitalize size-h3" style="vertical-align:top"></span></td>
+                <td width="11%" style="vertical-align:middle"><button class="btn btn-warning btn-xs" ng-click="pc.updateProcedure()"><span class="glyphicon glyphicon-open"></span> Update</button></td>
+                <td width="11%" style="vertical-align:middle"><button class="btn btn-danger btn-xs" style="margin-right:10px;" ng-click="pc.deleteProcedure()"><span class="glyphicon glyphicon-trash"></span> Delete</button></td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="divider"></div>
+    <table class="table" border="0">
+        <tbody>
+            <tr>
+                <td width="20%"><label class="control-label">First Name</label></td>
+                <td width="30%"><input type="text" class="form-control" data-ng-model="pc.patientDetails.firstName"></td>
+                <td width="20%"><label class="control-label">Last Name</label></td>
+                <td width="30%"><input type="text" class="form-control" data-ng-model="pc.patientDetails.lastName"></td>
+            </tr>
+            <tr>
+                <td width="20%"><label class="control-label">Date</label></td>
+                <td width="30%"><input kendo-date-picker k-format="'MM-dd-yyyy'" style="width: 100%" data-ng-model="pc.selectedProcedure.ProcedureDate" /></td>
+                <td width="20%"><label class="control-label">Session #</label></td>
+                <td width="30%"><input type="text" class="form-control" data-ng-model="pc.selectedProcedure.TreatmentSequenceId"></td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table" border="0">
+        <tbody>
+            <tr>
+                <td width="25%"><label class="control-label">Skin Type</label></td>
+                <td width="25%"><input type="checkbox" data-ng-model="pc.selectedProcedure.Dry"> Dry</td>
+                <td width="25%"><input type="checkbox" data-ng-model="pc.selectedProcedure.Normal"> Normal</td>
+                <td width="25%"><input type="checkbox" data-ng-model="pc.selectedProcedure.Oily"> Oily</td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table" border="0">
+        <tbody>
+            <tr>
+                <td width="25%"><label class="control-label">Cleansed client's skin with</label></td>
+                <td width="75%"><input type="text" class="form-control" data-ng-model="pc.selectedProcedure.CleansedWith" /></td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table" border="0">
+        <tbody>
+            <tr>
+                <td width="25%"><label class="control-label">Prepared client's skin with</label></td>
+                <td width="25%"></td>
+                <td width="25%"><input type="checkbox" data-ng-model="pc.selectedProcedure.PrepPad"> Pre-Pad</td>
+                <td width="25%"><input type="checkbox" data-ng-model="pc.selectedProcedure.Solution"> Solution</td>
+            </tr>
+        </tbody>
+    </table>    
+    <table class="table" border="0">
+        <tbody>
+            <tr>
+                <td width="25%"><label class="control-label">Allowed skin to</label></td>
+                <td width="25%"><input type="checkbox" data-ng-model="pc.selectedProcedure.AirDry"> Air Dry</td>
+                <td width="25%"><input type="checkbox" data-ng-model="pc.selectedProcedure.FanDry"> Fan Dry</td>
+                <td width="25%"><input type="checkbox" data-ng-model="pc.selectedProcedure.ClothDry"> Cloth Dry</td>
+            </tr>
+            <tr>
+                <td width="25%" colspan="2"><label class="control-label">Determined the hand piece to be used</label></td>
+                <td width="25%"><input type="checkbox" data-ng-model="pc.selectedProcedure.Gold"> Gold</td>
+                <td width="25%"><input type="checkbox" data-ng-model="pc.selectedProcedure.Silver"> Silver</td>
+            </tr>
+            <tr>
+                <td width="25%"><label class="control-label">Determine tip to be used</label></td>
+                <td width="25%"><input type="checkbox" data-ng-model="pc.selectedProcedure.Amber"> Amber</td>
+                <td width="25%"><input type="checkbox" data-ng-model="pc.selectedProcedure.Blue"> Blue</td>
+                <td width="25%"><input type="checkbox" data-ng-model="pc.selectedProcedure.Clear"> Clear</td>
+            </tr>
+            <tr>
+                <td width="25%"><label class="control-label">Vaccum power used</label></td>
+                <td width="25%"><input type="checkbox" data-ng-model="pc.selectedProcedure.Vac25"> 25</td>
+                <td width="25%"><input type="checkbox" data-ng-model="pc.selectedProcedure.Vac30"> 30</td>
+                <td width="25%"><input type="checkbox" data-ng-model="pc.selectedProcedure.Vac35"> 35</td>
+            </tr>
+            <tr>
+                <td width="25%"></td>
+                <td width="25%"><input type="checkbox" data-ng-model="pc.selectedProcedure.Vac40"> 40</td>
+                <td width="25%"><input type="checkbox" data-ng-model="pc.selectedProcedure.Vac45"> 45</td>
+                <td width="25%"><input type="checkbox" data-ng-model="pc.selectedProcedure.Vac50"> 50</td>
+            </tr>
+            <tr>
+                <td width="25%"><label class="control-label">Knob revolutions</label> <input type="checkbox" data-ng-model="pc.selectedProcedure.knob20"> 20</td>
+                <td width="25%"><input type="checkbox" data-ng-model="pc.selectedProcedure.knob30"> 30</td>
+                <td width="25%"><input type="checkbox" data-ng-model="pc.selectedProcedure.knob40"> 40</td>
+                <td width="25%"><input type="checkbox" data-ng-model="pc.selectedProcedure.knob50"> 50</td>
+            </tr>
+            <tr>
+                <td width="25%"><label class="control-label">Forhead test results</label></td>
+                <td width="25%"><input type="checkbox" data-ng-model="pc.selectedProcedure.ForheadNormal"> Normal</td>
+                <td width="25%"><input type="checkbox" data-ng-model="pc.selectedProcedure.ForheadSensitive"> Sensitive</td>
+                <td width="25%"><input type="checkbox" data-ng-model="pc.selectedProcedure.ForheadRedness"> Redness</td>
+            </tr>
+            <tr>
+                <td width="25%"></td>
+                <td width="25%"><input type="checkbox" data-ng-model="pc.selectedProcedure.ForheadPetechiae"> Petechiae(pin point bleeding)</td>
+                <td width="25%"><input type="checkbox" data-ng-model="pc.selectedProcedure.ForheadExcoriation"> Excoriation(scratch)</td>
+                <td width="25%"><input type="checkbox" data-ng-model="pc.selectedProcedure.ForheadNone"> None</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

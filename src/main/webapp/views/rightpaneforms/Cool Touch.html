@@ -1,0 +1,105 @@
+<div class="grid-structure">
+    <table class="table" border="0">
+        <tbody>
+            <tr>
+                <td width="11%" style="vertical-align:middle"></td>
+                <td width="11%" style="vertical-align:middle"></td>
+                <td width="56%" style="text-align:center"><span ng-bind="pc.selectedProcedureName" class="text-center text-capitalize size-h3" style="vertical-align:top"></span></td>
+                <td width="11%" style="vertical-align:middle"><button class="btn btn-warning btn-xs" ng-click="pc.updateProcedure()"><span class="glyphicon glyphicon-open"></span> Update</button></td>
+                <td width="11%" style="vertical-align:middle"><button class="btn btn-danger btn-xs" style="margin-right:10px;" ng-click="pc.deleteProcedure()"><span class="glyphicon glyphicon-trash"></span> Delete</button></td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="divider"></div>
+    <table class="table" border="0">
+        <tbody>
+            <tr>
+                <td width="20%"><label class="control-label">First Name</label></td>
+                <td width="30%"><input type="text" class="form-control" data-ng-model="pc.patientDetails.firstName"></td>
+                <td width="20%"><label class="control-label">Last Name</label></td>
+                <td width="30%"><input type="text" class="form-control" data-ng-model="pc.patientDetails.lastName"></td>
+            </tr>
+            <tr>
+                <td width="20%"><label class="control-label">Date</label></td>
+                <td width="30%"><input kendo-date-picker k-format="'MM-dd-yyyy'" style="width: 100%" data-ng-model="pc.selectedProcedure.ProcedureDate" /></td>
+                <td width="20%"><label class="control-label">Session #</label></td>
+                <td width="30%"><input type="text" class="form-control" data-ng-model="pc.selectedProcedure.TreatmentSequenceId"></td>
+            </tr>
+        </tbody>
+    </table>    
+    <table class="table" border="0">
+        <tr>
+            <td width="70%">
+                <table class="table" border="0">
+                    <tbody>
+                        <tr>
+                            <td width="20%"><label class="control-label">Anesthesia: Benzocaine 20% Lodicaine 6% Tetracaine 4%</label></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table class="table" border="0">
+                    <tbody>
+                        <tr>
+                            <td width="40%"><label class="control-label">Clinician</label></td>
+                            <td width="60%"><input type="text" class="form-control" data-ng-model="pc.selectedProcedure.DoctorClinician"></td>
+                        </tr>
+                        <tr>
+                            <td width="40%"><label class="control-label">Other</label></td>
+                            <td width="60%"><input type="text" class="form-control" data-ng-model="pc.selectedProcedure.OtherAreaDescription"></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table class="table" border="0">
+                    <tr>
+                        <td width="40%"><label class="control-label">Skin Type</label></td>
+                        <td width="10%">I</td>
+                        <td width="10%">II</td>
+                        <td width="10%">III</td>
+                        <td width="10%">IV</td>
+                        <td width="10%">V</td>
+                        <td width="10%">VI</td>
+                    </tr>
+                    <tr>
+                        <td width="20%"></td>
+                        <td width="5%"><input type="checkbox" data-ng-model="pc.selectedProcedure.SkinTypeI"></td>
+                        <td width="5%"><input type="checkbox" data-ng-model="pc.selectedProcedure.SkinTypeII"></td>
+                        <td width="5%"><input type="checkbox" data-ng-model="pc.selectedProcedure.SkinTypeIII"></td>
+                        <td width="5%"><input type="checkbox" data-ng-model="pc.selectedProcedure.SkinTypeIV"></td>
+                        <td width="5%"><input type="checkbox" data-ng-model="pc.selectedProcedure.SkinTypeV"></td>
+                        <td width="5%"><input type="checkbox" data-ng-model="pc.selectedProcedure.SkinTypeVI"></td>
+                        <td width="50%"></td>
+                    </tr>
+                </table>
+                <fieldset class="scheduler-border" style="width: 100%;">
+                    <legend class="scheduler-border"> Procedures </legend>
+                    <table class="table" border="0">
+                        <tbody>
+                            <tr>
+                                <td width="50%"><input type="checkbox" data-ng-model="pc.selectedProcedure.Proceduresdone"> Sign on Door</td>                                
+                                <td width="50%"><input type="checkbox" data-ng-model="pc.selectedProcedure.Proceduresdone"> Pt and staff eye protection</td>
+                            </tr>
+                            <tr>
+                                <td width="50%"><input type="checkbox" data-ng-model="pc.selectedProcedure.Proceduresdone"> Hand Piece Cleaned</td>
+                                <td width="50%"><input type="checkbox" data-ng-model="pc.selectedProcedure.Proceduresdone"> Check Cryogen</td>
+                            </tr>
+                            <tr>
+                                <td width="100%" colspan="2"><input type="checkbox" data-ng-model="pc.selectedProcedure.Proceduresdone"> Skin clean and dry</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </fieldset>
+            </td>
+            <td width="30%" style="text-align:center">
+                <h4>Mark Areas Treated</h4>
+                <div style="position: relative; width: 147px; height: 222px;margin:auto">
+                    <input type="checkbox" data-ng-model="pc.selectedProcedure.MidFaceRight" style="left:40px;top:110px;position: absolute;">
+                    <input type="checkbox" data-ng-model="pc.selectedProcedure.MidFaceLeft" style="left:96px;top:110px;position: absolute;">
+                    <input type="checkbox" data-ng-model="pc.selectedProcedure.Forehead" style="left:68px;top:50px;position: absolute;">
+                    <input type="checkbox" data-ng-model="pc.selectedProcedure.Chin" style="left:68px;top:190px;position: absolute;">
+                    <input type="checkbox" data-ng-model="pc.selectedProcedure.Neck" style="left:68px;top:160px;position: absolute;">
+                    <img src="images/procedure/face.png" width="147" height="222" />
+                </div>
+            </td>
+        </tr>
+    </table>
+</div>

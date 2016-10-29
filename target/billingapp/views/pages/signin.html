@@ -1,0 +1,32 @@
+<div class="page-signin">
+    <div class="signin-header">
+        <section class="logo text-center">
+            <a href="#/">{{uc.BrandName}}</a>
+        </section>
+    </div>
+    <div class="main-body">
+        <div class="container">
+            <div class="form-container">
+                <form class="form-horizontal">
+                    <fieldset>
+                        <div class="form-group">
+                            <div class="btn-icon-lined btn-icon-round btn-icon-sm btn-default-light">
+                                <span class="glyphicon glyphicon-user"></span>
+                            </div>
+                            <input type="text" class="form-control input-lg input-round text-center" data-ng-model="uc.username" placeholder="Username">
+                        </div>
+                        <div class="form-group">
+                            <div class="btn-icon-lined btn-icon-round btn-icon-sm btn-default-light">
+                                <span class="glyphicon glyphicon-lock"></span>
+                            </div>
+                            <input type="password" class="form-control input-lg input-round text-center" data-ng-model="uc.password" placeholder="Password">
+                        </div>
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary btn-lg btn-round btn-block text-center" data-ng-click="uc.signIn()">Log in</button>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

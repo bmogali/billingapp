@@ -1,0 +1,100 @@
+﻿@charset "utf-8";
+/* CSS Document */
+*, body{margin:0;padding:0;}
+h1,h2,h3,h4,h5,h6{font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;}
+h1{font-size:3em;text-align:center;}
+h2{font-size:1.5em;text-align:center;}
+h3{font-size:1em;text-align:left!important;}
+h4{font-size:1.2em;text-align:center;}
+h3.fontL{font-size:1.3em;text-align:left!important;}
+p,span{font-size:1.0em!important;line-height:20px;}
+.float-left{float:left;display:inline}
+.clear-right{float:none;display:block;clear:right;}
+.word-space20{float:left;margin-left:20px;}
+.text-underline{text-decoration:underline!important;}
+.fill-blankB780{float:left;width:780px;display:inline;height:15px;border-top:1px solid #333;margin:0 5px 0 0;}
+.fill-blank730{float:left;width:730px;display:inline;height:15px;border-bottom:1px solid #333;margin:0 5px 0 0;}
+.fill-blank480{float:left;width:580px;display:inline;height:15px;border-bottom:1px solid #333;margin:0 5px 0 0;}
+.fill-blank440{float:left;width:440px;display:inline;height:15px;border-bottom:1px solid #333;margin:0 5px 0 0;}
+.fill-blank320{float:left;width:320px;display:inline;height:15px;border-bottom:1px solid #333;margin:0 5px 0 0;}
+.fill-blank220{float:left;width:220px;display:inline;height:15px;border-bottom:1px solid #333;margin:0 5px 0 0;}
+.fill-blankB220{float:left;width:220px;display:inline;height:15px;border-top:1px solid #333;margin:0 5px 0 0;}
+.fill-blank150{float:left;width:150px;display:inline;height:15px;border-bottom:1px solid #333;margin:0 5px 0 0;}
+.fill-blank80{float:left;width:80px;display:inline;height:15px;border-bottom:1px solid #333;margin:0 5px 0 0;}
+.fill-blank50{float:left;width:50px;display:inline;height:15px;border-bottom:1px solid #333;margin:0 5px 0 0;}
+.fill-blank20{float:left;width:20px;display:inline;height:15px;border-bottom:1px solid #333;margin:0 5px 0 0;}
+.fill-blankBT780{float:left;width:780px;display:inline;height:20px;border-top:none;margin:0 5px 0 0;padding:0 5px;color:#999!important;}
+.fill-blankBT220{float:left;width:220px;display:inline;height:20px;border-top:none;margin:0 5px 0 0;padding:0 5px;color:#999!important;}
+.fill-blankB780{float:left;width:780px;display:inline;height:20px;border-top:1px solid #333;margin:0 5px 0 0;padding:0 5px;}
+.fill-blankB220{float:left;width:220px;display:inline;height:20px;border-top:1px solid #333;margin:0 5px 0 0;padding:0 5px;}
+.fill-blank730{float:left;width:730px;display:inline;height:20px;border-bottom:1px solid #333;margin:0 5px 0 0;padding:0 5px;color:#999!important;}
+.fill-blank480{float:left;width:580px;display:inline;height:20px;border-bottom:1px solid #333;margin:0 5px 0 0;padding:0 5px;color:#999!important;}
+.fill-blank440{float:left;width:440px;display:inline;height:20px;border-bottom:1px solid #333;margin:0 5px 0 0;padding:0 5px;color:#999!important;}
+.fill-blank320{float:left;width:320px;display:inline;height:20px;border-bottom:1px solid #333;margin:0 5px 0 0;padding:0 5px;color:#999!important;}
+.fill-blank220{float:left;width:220px;display:inline;height:20px;border-bottom:1px solid #333;margin:0 5px 0 0;padding:0 5px;color:#999!important;}
+.fill-blank150{float:left;width:150px;display:inline;height:20px;border-bottom:1px solid #333;margin:0 5px 0 0;padding:0 5px;color:#999!important;}
+.fill-blank80{float:left;width:80px;display:inline;height:20px;border-bottom:1px solid #333;margin:0 5px 0 0;padding:0 5px;color:#999!important;}
+.fill-blank50{float:left;width:50px;display:inline;height:20px;border-bottom:1px solid #333;margin:0 5px 0 0;padding:0 5px;color:#999!important;}
+.fill-blank20{float:left;width:20px;display:inline;height:20px;border-bottom:1px solid #333;margin:0 5px 0 0;padding:0 5px;color:#999!important;}
+.font-bold{font-weight:bold;}
+.font-bold-6{font-weight:600;!important;}
+.margin-V5, .margin-V10, .margin-V20, .margin-V40{float:left;width:100%;display:block;}
+.margin-V5{height:5px;}
+.margin-V10{height:10px;}
+.margin-V20{height:20px;}
+.margin-V40{height:40px;}
+.margin-H5{margin-right:5px;}
+.spacer-h-R10{margin-right:32px!important;}
+.margin-Hlr20{margin:0 20px;}
+.margin-Hlr5{margin:0 5px;}
+.text-right{text-align:right!important;}
+.text-left{text-align:left!important;}
+header{float:left; width:100%;display:block;border-bottom:5px double #666;margin-bottom:40px;}
+section{float:none!important;width:100%!important;display:block!important;clear:both!important; height:auto;}
+.mainouterbox{margin:10px auto 10px auto; width:850px; float:none;}
+.col20{float:left;width:20%;display:inline;}
+.col21{float:left;width:20%;display:inline;}
+.col24{float:left;width:24%;display:inline;}
+.col33{float:left;width:33.3%;display:inline;}
+.col50{float:left;width:50%;display:inline;}
+.col60{float:left;width:60%;display:inline;}
+.clear-both{float:none;display:block;clear:both;}
+.footer{float:left;width:100%;dispaly:block;height:20px;margin-bottom:30px;}
+.option-section{width:auto;padding:0px 5px;border:1px solid #ccc;margin:0 2px;color:#c9c9c9;}
+/*patient form style ------  */
+.col20>img{visibility:hidden!important;}
+.width60{width:60px;}
+.width90{width:90px;}
+.borderBox{float:left!important;width:100%!important;border:1px solid #333;padding:1%;margin:20px 0;}
+.headerprint{float:left;display:block;position:relative; top:10px;}
+.footerprint{float:left;display:block;position:relative; bottom:10px;}
+.page-section{float:left;width:100%;height:100%;display:block;}
+.page-head{float:left!important;width:100%!important;display:none!important;margin:0px 0px 20px 0px!important;color:#666666!important;}
+.page-footer{float:left;width:100%;display:block; display:none!important;color:#666666!important; margin:20px 0 10px 0!important;}
+.only-print{display:none!important;}
+.list-space{list-style-type:disc!important; list-style-position:outside!important; padding-left:30px;}
+.list-space-num{list-style-type:decimal!important; list-style-position:outside!important; padding-left:30px;}
+li>ul{list-style-type:circle!important; list-style-position:outside!important; padding-left:30px;}
+.spacer-margin-left{float:left;padding-left:30px!important;}
+@media only screen{
+.page-break1{display:none;}
+}
+@media only print{
+.col-lg-6{float:left!important;width:50%!important;display:inline!important;}
+.pcol-lg-4{float:left!important;width:40%!important;display:block!important;text-align:left!important;}
+.pcol-lg-8{float:right!important;width:60%!important;display:block!important;text-align:right!important;}
+/*patient form style ------  */
+.col20>img{visibility:hidden!important;}
+.option-section{width:auto;padding:0px 5px;border:1px solid #ccc;margin:0 2px;color:#c9c9c9!important;}
+.page-break0{float:left;width:100%;display:block;height:120px;page-break-before:always;page-break-after:always; }
+.page-break1{float:left;width:100%;display:block;height:200px;page-break-before:always;page-break-after:always; }
+.page-break2{float:left;width:100%;display:block;height:770px;page-break-before:always;page-break-after:always; }
+.option-section{width:auto;padding:0px 5px;border:1px solid #ccc;margin:0 2px;color:#c9c9c9!important;}
+.pagebreak-after{page-break-after:always!important;}
+.pagebreak-before{page-break-after:always!important;}
+.pagebreak-inside{ page-break-inside:inherit!important;}
+.page-head{float:left!important;width:100%!important;display:block!important;margin:0px 0px 20px 0px!important;color:#666666!important;}
+.page-footer{float:left;width:100%;display:block; display:block!important;color:#666666!important; margin:40px 0 10px 0!important;}
+.only-print{display:block!important;}
+
+}

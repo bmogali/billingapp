@@ -1,0 +1,17 @@
+﻿<div class="modal-header">
+    <h3>Services Billing</h3>
+</div>
+<div class="modal-body">
+    <strong>Services to be billed for : </strong><span style="color: green; font-size: 14px"><strong>{{smic.patientName}}</strong></span>
+    <div class="divider"></div>
+    <div kendo-grid="smic.servicedatagrid"
+         k-options="smic.servicegridoptions"
+         k-data-source="smic.serviceBills"
+         id="serviceGrid"></div>
+    <div class="divider"></div>
+    <strong>Total Services : </strong><span style="color: green; font-size: 14px"><strong>{{smic.totalServicesBill}}</strong></span>
+</div>
+<div class="modal-footer">
+    <button class="btn btn-primary" ng-click="smic.ok()">Update</button>
+    <button class="btn btn-warning" ng-click="smic.cancel()">Cancel</button>
+</div>
