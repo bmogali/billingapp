@@ -566,11 +566,14 @@
 
                         popupWin.document.close();
 
-                        popupWin.print();
+                        $timeout(function () { 
+                        	popupWin.print(); 
+                        	popupWin.onfocus = function () {
+                                popupWin.close();
+                            }
+                        
+                        },300);
 
-                        popupWin.onfocus = function () {
-                            popupWin.close();
-                        }
                     }, 100);
                 });
             }, 500);
@@ -835,11 +838,15 @@
 
                         popupWin.document.close();
 
-                        popupWin.print();
+                        $timeout(function () { 
+                        	popupWin.print(); 
+                        	popupWin.onfocus = function () {
+                                popupWin.close();
+                            }
+                        
+                        },300);
 
-                        popupWin.onfocus = function () {
-                            popupWin.close();
-                        }
+                        
                     }, 100);
                 });
             });

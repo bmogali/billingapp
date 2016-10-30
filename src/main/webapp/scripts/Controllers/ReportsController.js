@@ -131,11 +131,13 @@
 
             popupWin.document.close();
 
-            popupWin.print();
-
-            popupWin.onfocus = function () {
-                popupWin.close();
-            }
+            $timeout(function () { 
+            	popupWin.print(); 
+            	popupWin.onfocus = function () {
+                    popupWin.close();
+                }
+            
+            },300);
         }
 
         setTimeout(function () {
