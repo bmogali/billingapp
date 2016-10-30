@@ -446,6 +446,7 @@
                     });
 
                     $scope.pc.calculateMonetoryValue();
+                    $scope.pc.updateBillingDetails();
                 }
             });
         }
