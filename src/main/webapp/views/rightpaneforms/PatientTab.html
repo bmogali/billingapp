@@ -28,71 +28,75 @@
             <tr>
                 <td width="20%"><label class="control-label">City</label></td>
                 <td width="30%"><input type="text" class="form-control" data-ng-model="pc.patientDetails.mailingCity" tabindex="5"></td>
-                <td width="20%"><label class="control-label">Next Appointment</label></td>
-                <td width="30%"><input kendo-date-time-picker k-interval="15" k-format="'MM-dd-yyyy HH:mm:ss'" k-time-format="'HH:mm'" style="width: 100%" k-ng-model="pc.patientDetails.appointment" tabindex="29" /></td>
+                <td width="20%"><label class="control-label">Mobile No</label></td>
+                <td width="30%"><input type="text" class="form-control" data-ng-model="pc.patientDetails.mobileNumber" tabindex="9"></td>
             </tr>
             <tr>
                 <td width="20%"><label class="control-label">State</label></td>
                 <td width="30%"><input type="text" class="form-control" data-ng-model="pc.patientDetails.mailingState" tabindex="6"></td>
-                <td width="20%"><label class="control-label">Zip</label></td>
-                <td width="30%"><input type="text" class="form-control" data-ng-model="pc.patientDetails.mailingZip" tabindex="7"></td>
+                <td width="20%"><label class="control-label">Next Appointment</label></td>
+                <td width="30%"><input kendo-date-time-picker k-interval="15" k-format="'MM-dd-yyyy HH:mm:ss'" k-time-format="'HH:mm'" style="width: 100%" k-ng-model="pc.patientDetails.appointment" tabindex="29" /></td>
             </tr>
             <tr>
                 <td width="20%"><label class="control-label">DOB</label></td>
                 <td width="30%"><input kendo-date-picker k-format="'MM-dd-yyyy'" style="width: 100%" data-ng-model="pc.patientDetails.dob" tabindex="2" /></td>
+                <td width="20%"><label class="control-label">Zip</label></td>
+                <td width="30%"><input type="text" class="form-control" data-ng-model="pc.patientDetails.mailingZip" tabindex="7"></td>
+            </tr>
+            <tr>
+                <td width="20%"><label class="control-label">Marital Status</label></td>
+                <td width="30%"><input type="text" class="form-control" data-ng-model="pc.patientDetails.maritalStatus" tabindex="10"></td>
                 <td width="20%"><label class="control-label">Sex</label></td>
                 <td width="30%">
-                    <select kendo-drop-down-list style="width: 100%" data-ng-model="pc.patientDetails.sex" tabindex="10">
+                    <select kendo-drop-down-list style="width: 100%" data-ng-model="pc.patientDetails.sex" tabindex="11">
                         <option>Male</option>
                         <option>Female</option>
                     </select>
                 </td>
             </tr>
             <tr>
-                <td width="20%"><label class="control-label">Marital Status</label></td>
-                <td width="30%"><input type="text" class="form-control" data-ng-model="pc.patientDetails.maritalStatus" tabindex="11"></td>
-                <td width="20%"><label class="control-label">Social Security</label></td>
-                <td width="30%"><input type="text" class="form-control" data-ng-model="pc.patientDetails.socSec" tabindex="12"></td>
-            </tr>
-            <tr>
                 <td width="20%"><label class="control-label">Drivers License</label></td>
-                <td width="30%"><input type="text" class="form-control" data-ng-model="pc.patientDetails.driversLicenseNum" tabindex="13"></td>
-                <td width="20%"><label class="control-label">Email</label></td>
-                <td width="30%"><input type="text" class="form-control" data-ng-model="pc.patientDetails.email" tabindex="14"></td>
+                <td width="30%"><input type="text" class="form-control" data-ng-model="pc.patientDetails.driversLicenseNum" tabindex="12"></td>
+                <td width="20%"><label class="control-label">Social Security</label></td>
+                <td width="30%"><input type="text" class="form-control" data-ng-model="pc.patientDetails.socSec" tabindex="13"></td>
             </tr>
             <tr>
                 <td width="20%"><label class="control-label">Spouse/Partner</label></td>
-                <td width="30%"><input type="text" class="form-control" data-ng-model="pc.patientDetails.spousePartner" tabindex="15"></td>
-                <td width="20%"><label class="control-label">Referred By</label></td>
-                <td width="30%"><input type="text" class="form-control" data-ng-model="pc.patientDetails.referredBy" tabindex="16"></td>
+                <td width="30%"><input type="text" class="form-control" data-ng-model="pc.patientDetails.spousePartner" tabindex="14"></td>
+                <td width="20%"><label class="control-label">Email</label></td>
+                <td width="30%"><input type="text" class="form-control" data-ng-model="pc.patientDetails.email" tabindex="15"></td>
             </tr>
             <tr>
                 <td width="20%"><label class="control-label">Primary Care</label></td>
-                <td width="30%"><input type="text" class="form-control" data-ng-model="pc.patientDetails.primaryCare" tabindex="17"></td>
-                <td width="20%"><label class="control-label">Pharmacy</label></td>
-                <td width="30%"><input type="text" class="form-control" data-ng-model="pc.patientDetails.pharmacy" tabindex="18"></td>
+                <td width="30%"><input type="text" class="form-control" data-ng-model="pc.patientDetails.primaryCare" tabindex="16"></td>
+                <td width="20%"><label class="control-label">Referred By</label></td>
+                <td width="30%"><input type="text" class="form-control" data-ng-model="pc.patientDetails.referredBy" tabindex="17"></td>
             </tr>
             <tr>
                 <td width="20%"><label class="control-label">Guarantor Name</label></td>
-                <td width="30%"><input type="text" class="form-control" data-ng-model="pc.patientDetails.guarantorName" tabindex="19"></td>
-                <td width="20%"><label class="control-label">DOB (Guarantor)</label></td>
-                <td width="30%"><input kendo-date-picker k-format="'MM-dd-yyyy'" style="width: 100%" data-ng-model="pc.patientDetails.guarantorDOB" tabindex="20" /></td>
+                <td width="30%"><input type="text" class="form-control" data-ng-model="pc.patientDetails.guarantorName" tabindex="18"></td>
+                <td width="20%"><label class="control-label">Pharmacy</label></td>
+                <td width="30%"><input type="text" class="form-control" data-ng-model="pc.patientDetails.pharmacy" tabindex="19"></td>
             </tr>
             <tr>
                 <td width="20%"><label class="control-label">Social Security</label></td>
-                <td width="30%"><input type="text" class="form-control" data-ng-model="pc.patientDetails.guarantorSocSec" tabindex="21"></td>
-                <td width="20%"><label class="control-label">Phone</label></td>
-                <td width="30%"><input type="text" class="form-control" data-ng-model="pc.patientDetails.guarantorPhone" tabindex="22"></td>
+                <td width="30%"><input type="text" class="form-control" data-ng-model="pc.patientDetails.guarantorSocSec" tabindex="20"></td>
+                <td width="20%"><label class="control-label">DOB (Guarantor)</label></td>
+                <td width="30%"><input kendo-date-picker k-format="'MM-dd-yyyy'" style="width: 100%" data-ng-model="pc.patientDetails.guarantorDOB" tabindex="21" /></td>
             </tr>
             <tr>
                 <td width="20%"><label class="control-label">Address</label></td>
-                <td width="30%"><input type="text" class="form-control" data-ng-model="pc.patientDetails.guarantorAddress" tabindex="23"></td>
-                <td width="20%"><label class="control-label">City</label></td>
-                <td width="30%"><input type="text" class="form-control" data-ng-model="pc.patientDetails.guarantorCity" tabindex="24"></td>
+                <td width="30%"><input type="text" class="form-control" data-ng-model="pc.patientDetails.guarantorAddress" tabindex="22"></td>
+                <td width="20%"><label class="control-label">Phone</label></td>
+                <td width="30%"><input type="text" class="form-control" data-ng-model="pc.patientDetails.guarantorPhone" tabindex="23"></td>
             </tr>
             <tr>
                 <td width="20%"><label class="control-label">State</label></td>
-                <td width="30%"><input type="text" class="form-control" data-ng-model="pc.patientDetails.guarantorState" tabindex="25"></td>
+                <td width="30%"><input type="text" class="form-control" data-ng-model="pc.patientDetails.guarantorState" tabindex="24"></td>
+                <td width="20%"><label class="control-label">City</label></td>
+                <td width="30%"><input type="text" class="form-control" data-ng-model="pc.patientDetails.guarantorCity" tabindex="25"></td>
+            </tr>
+            <tr>                
                 <td width="20%"><label class="control-label">Zip</label></td>
                 <td width="30%"><input type="text" class="form-control" data-ng-model="pc.patientDetails.guarantorZip" tabindex="26"></td>
             </tr>
@@ -105,7 +109,7 @@
         </tr>
         <tr>
             <td width="20%"><label class="control-label">Medical History</label></td>
-            <td width="80%"><textarea class="form-control" rows="2" data-ng-model="pc.patientDetails.medicalHistory" tabindex="28"></textarea></td>
+            <td width="80%"><textarea class="form-control" rows="1" data-ng-model="pc.patientDetails.medicalHistory" tabindex="28"></textarea></td>
         </tr>
     </table>
 </div>
