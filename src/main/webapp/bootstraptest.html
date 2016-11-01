@@ -13,6 +13,9 @@
             margin-left: auto;
             margin-right: auto;
         }
+        
+        @media print { html, body { height: 99%; } }
+        
     </style>
 </head>
 <body>
@@ -22,8 +25,8 @@
                 <tr>
                     <td width="10%" style="vertical-align:middle"><img src="images/DC-Logo-Print.png" width="49" height="39" /></td>
                     <td width="80%" style="text-align:center">
-                        <h2>Derma Laser Centers</h2>
-                        <h3>Patient Invoice and Billing Record</h3>
+                        <h3>Derma Laser Centers</h3>
+                        <h4>Patient Invoice and Billing Record</h4>
                     </td>
                     <td width="10%"></td>
                 </tr>
@@ -31,15 +34,15 @@
         <table class="table table-condensed borderless">
             <tbody>
                 <tr>
-                    <td width="18%" class="text-primary"><label class="control-label">Name</label></td>
+                    <td width="18%" class="text-primary"><label class="control-label">Name :</label></td>
                     <td width="47%"><span data-ng-bind="pc.patientFullName" /></td>
-                    <td width="25%" class="text-primary"><label class="control-label">Date</label></td>
-                    <td width="10%"><span data-ng-bind="pc.currentDate" /></td>
+                    <td width="20%" class="text-primary"><label class="control-label">Date :</label></td>
+                    <td width="15%"><span data-ng-bind="pc.currentDate" /></td>
                 </tr>
                 <tr>
                     <td></td>
                     <td><span data-ng-bind="pc.patientDetails.mailingAddress1" /></td>
-                    <td class="text-primary"><label class="control-label">Next Appt</label></td>
+                    <td class="text-primary"><label class="control-label">Next Appt :</label></td>
                     <td><span data-ng-bind="pc.appointment" /></td>
                 </tr>
                 <tr>
@@ -49,9 +52,9 @@
                     <td></td>
                 </tr>
                 <tr>
-                    <td class="text-primary"><label class="control-label">Billing Period</label></td>
+                    <td class="text-primary"><label class="control-label">Billing Period :</label></td>
                     <td><span data-ng-bind="pc.billingPeriod" /></td>
-                    <td class="text-red"><label class="control-label">Total Lifetime Balance</label></td>
+                    <td class="text-red"><label class="control-label">Total Lifetime Balance :</label></td>
                     <td class="text-red"><span ng-bind="pc.formatCurrency(pc.totalBalance)" /></td>
                 </tr>
             </tbody>
