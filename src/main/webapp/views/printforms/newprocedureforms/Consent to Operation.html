@@ -10,6 +10,11 @@
     <link rel="stylesheet" href="styles/print-bootstrap.css" />
     <link rel="stylesheet" href="styles/print-bootstrap-theme.css" />
     <link rel="stylesheet" href="styles/print.css" />
+    <style type="text/css">
+    	body {
+		    line-height: 1.25;
+		}
+    </style>
 </head>
 <body>
     <div class="mainouterbox">
@@ -26,9 +31,9 @@
                 </header>
                 <section class="container-fluid margin-T20">
                     <ol>
-                        <li>I hereby authorize Dr. Ayman El-Attar and/or such assistants as may be selected by him to perform the following procedures on (myself/patient): Seema Desai <br /><br /> <b>Procedure</b> : <span data-ng-bind="pc.selectedProcedure.ProcedureConsentName"></span><br /><br /></li>
+                        <li>I hereby authorize Dr. Ayman El-Attar and/or such assistants as may be selected by him to perform the following procedures on (myself/patient): <span data-ng-bind="pc.patientDetails.firstName"></span>&nbsp;<span data-ng-bind="pc.patientDetails.lastName"></span> <br /><br /> <b>Procedure</b> : <span data-ng-bind="pc.selectedProcedure.ProcedureConsentName"></span><br /><br /></li>
                         <li>The procedure(s) listed in paragraph 1 has/have been explained to me by Dr. Ayman El-Attar.  I have been given the appropriate information regarding the procedure and I have had an opportunity to ask questions.  I understand the nature and consequences of this procedure as follows : <br /><span data-ng-bind="pc.selectedProcedure.ProcedureConsequences"></span><br /><br /><span style="font-size:11px">[Designation of procedure(s) in terms of what will be done to the patient's body and what will be the consequences of the procedure]</span><br /><br /></li>
-                        <li>I recognize that during the course of the procedure, unforeseen conditions may necessitate additional or different procedures that those listed above. I therefor authorize and request that the above surgeons/assistants/associates and/or designees performs such procedures as are, in his/her professional judgement, necessary and desirable, including but not limited to, procedures involving pathology and radiology.  The authority granted under this paragraph, 3, shall extend to remedying conditions that are known to doctors named above at the time the operation is started.<br /><br /></li>
+                        <li>I recognize that during the course of the procedure, unforeseen conditions may necessitate additional or different procedures that those listed above. I therefor authorize and request that the above surgeons/assistants/associates and/or designees performs such procedures as are, in his/her professional judgment, necessary and desirable, including but not limited to, procedures involving pathology and radiology.  The authority granted under this paragraph, 3, shall extend to remedying conditions that are known to doctors named above at the time the operation is started.<br /><br /></li>
                         <li>I consent to use of anesthetics as they may deem advisable.<br /><br /></li>
                         <li>In the event that one of my health care providers sustains an exposure to my blood or body fluids during this procedure I consent to the drawing of my blood and performance of a rapid blood test for antibodies to the HIV 1 virus known to cause AIDS.  This preliminary test will allow determination of whether urgent health care intervention for my health care provider is needed. I will be counseled in detail by my attending physician about the results of such testing.<br /><br /></li>
                         <li>The risks, benefits, potential complications, and alternative options associated with the planned procedure and the possible use of blood were discussed with (me/patient), including infection, hemorrhage, mond dehiscence.<br /><br /></li>
