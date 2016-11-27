@@ -6,7 +6,7 @@
                 <td width="11%" style="vertical-align:middle"></td>
                 <td width="56%" style="text-align:center"><span ng-bind="pc.selectedProcedureName" class="text-center text-capitalize size-h3" style="vertical-align:top"></span></td>
                 <td width="11%" style="vertical-align:middle"><button class="btn btn-warning btn-xs" ng-click="pc.updateProcedure()"><span class="glyphicon glyphicon-open"></span> Update</button></td>
-                <td width="11%" style="vertical-align:middle"><button class="btn btn-danger btn-xs" style="margin-right:10px;" ng-click="pc.deleteProcedure()"><span class="glyphicon glyphicon-trash"></span> Delete</button></td>
+                <td width="11%" style="vertical-align:middle"><button class="btn btn-danger btn-xs" style="margin-right:10px;" ng-click="pc.deleteProcedureFromView(pc.selectedProcedure)"><span class="glyphicon glyphicon-trash"></span> Delete</button></td>
             </tr>
         </tbody>
     </table>
@@ -60,10 +60,22 @@
                     <td width="25%"><input type="checkbox" data-ng-model="pc.selectedProcedure.Chest"> Chest</td>
                 </tr>
                 <tr>
-                    <td width="25%"><input type="checkbox" data-ng-model="pc.selectedProcedure.Bikini">Full Bikini</td>
+                    <td width="25%"><input type="checkbox" data-ng-model="pc.selectedProcedure.Face"> Face</td>
+                    <td width="25%"><input type="checkbox" data-ng-model="pc.selectedProcedure.Underarms"> Underarms</td>
+                    <td width="25%"><input type="checkbox" data-ng-model="pc.selectedProcedure.Bikiniline"> Bikini Line</td>
+                    <td width="25%"><input type="checkbox" data-ng-model="pc.selectedProcedure.Ears"> Ears</td>
+                </tr>
+                <tr>
+                    <td width="25%"><input type="checkbox" data-ng-model="pc.selectedProcedure.Neck"> Neck</td>
+                    <td width="25%"><input type="checkbox" data-ng-model="pc.selectedProcedure.Arms"> Arms</td>
+                    <td width="25%"><input type="checkbox" data-ng-model="pc.selectedProcedure.Bikini"> Full Bikini</td>
                     <td width="25%"><input type="checkbox" data-ng-model="pc.selectedProcedure.Back"> Back</td>
+                </tr>
+                <tr>
                     <td width="25%"><input type="checkbox" data-ng-model="pc.selectedProcedure.Thigh"> Thigh</td>
                     <td width="25%"><input type="checkbox" data-ng-model="pc.selectedProcedure.OtherArea"> Other Area</td>
+                    <td width="25%"> </td>
+                    <td width="25%"> </td>
                 </tr>
                 <tr>
                     <td width="100%" colspan="4"><input type="text" class="form-control" data-ng-model="pc.selectedProcedure.OtherAreaDescription"></td>

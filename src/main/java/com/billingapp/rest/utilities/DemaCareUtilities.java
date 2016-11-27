@@ -6,6 +6,8 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
+import javax.persistence.Column;
+
 import org.apache.commons.lang3.StringUtils;
 
 import com.billingapp.rest.dto.AreasDTO;
@@ -230,6 +232,9 @@ public class DemaCareUtilities {
 		procedure.setUpperLip(procedureDTO.isUpperLip());
 		procedure.setBikini(procedureDTO.isBikini());
 		procedure.setBack(procedureDTO.isBack());
+		procedure.setBikiniline(procedureDTO.isBikiniline());
+		procedure.setUnderarms(procedureDTO.isUnderarms());
+		procedure.setEars(procedureDTO.isEars());
 		procedure.setChin(procedureDTO.isChin());
 		procedure.setLeg(procedureDTO.isLeg());
 		procedure.setThigh(procedureDTO.isThigh());
@@ -491,6 +496,9 @@ public class DemaCareUtilities {
 		procedureDTO.setUpperLip(procedure.isUpperLip());
 		procedureDTO.setBikini(procedure.isBikini());
 		procedureDTO.setBack(procedure.isBack());
+		procedureDTO.setBikiniline(procedure.isBikiniline());
+		procedureDTO.setUnderarms(procedure.isUnderarms());
+		procedureDTO.setEars(procedure.isEars());
 		procedureDTO.setChin(procedure.isChin());
 		procedureDTO.setLeg(procedure.isLeg());
 		procedureDTO.setThigh(procedure.isThigh());

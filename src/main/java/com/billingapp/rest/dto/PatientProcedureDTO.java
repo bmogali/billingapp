@@ -54,6 +54,9 @@ public class PatientProcedureDTO {
 	@Column(name="MidFaceRight")	private boolean MidFaceRight;
 	@Column(name="MidFaceLeft")	private boolean MidFaceLeft;
 	@Column(name="Face")	private boolean Face;
+	@Column(name="Bikiniline")	private boolean Bikiniline;
+	@Column(name="Underarms")	private boolean Underarms;
+	@Column(name="Ears")	private boolean Ears;
 	@Column(name="UpperLip")	private boolean UpperLip;
 	@Column(name="Bikini")	private boolean Bikini;
 	@Column(name="Back")	private boolean Back;
@@ -1337,6 +1340,24 @@ public class PatientProcedureDTO {
 	}
 	public void setProcedureAreas(Set<ProcedureAreasDTO> procedureAreas) {
 		this.procedureAreas = procedureAreas;
+	}
+	public boolean isBikiniline() {
+		return Bikiniline;
+	}
+	public void setBikiniline(boolean bikiniline) {
+		Bikiniline = bikiniline;
+	}
+	public boolean isUnderarms() {
+		return Underarms;
+	}
+	public void setUnderarms(boolean underarms) {
+		Underarms = underarms;
+	}
+	public boolean isEars() {
+		return Ears;
+	}
+	public void setEars(boolean ears) {
+		Ears = ears;
 	}
 	
 }

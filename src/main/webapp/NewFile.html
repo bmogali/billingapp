@@ -1,0 +1,175 @@
+<html><head><title class="ng-scope"></title><meta charset="utf-8" class="ng-scope"><meta name="viewport" content="width=device-width, initial-scale=1" class="ng-scope"><link rel="stylesheet" media="all" href="styles/bootstrap/bootstrap.css" class="ng-scope"><link rel="stylesheet" media="all" href="styles/bootstrap/custom.css" class="ng-scope"><style class="ng-scope">
+        body {
+            height: 297mm;
+            width: 210mm;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        body > *:last-child {
+		    page-break-after: auto
+		}
+        
+    </style></head><body><div class="ng-scope">
+        <table class="table table-condensed borderless">
+            <tbody>
+                <tr>
+                    <td width="10%" style="vertical-align:middle"><img src="images/DC-Logo-Print.png" width="49" height="39"></td>
+                    <td width="80%" style="text-align:center">
+                        <h3>Derma Laser Centers</h3>
+                        <h4>Patient Invoice and Billing Record</h4>
+                    </td>
+                    <td width="10%"></td>
+                </tr>
+        </tbody></table>
+        <table class="table table-condensed borderless">
+            <tbody>
+                <tr>
+                    <td width="18%" class="text-primary"><label class="control-label">Name :</label></td>
+                    <td width="47%"><span data-ng-bind="pc.patientFullName" class="ng-binding">John McGuire</span></td>
+                    <td width="20%" class="text-primary"><label class="control-label">Date :</label></td>
+                    <td width="15%"><span data-ng-bind="pc.currentDate" class="ng-binding">10-31-2016</span></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><span data-ng-bind="pc.patientDetails.mailingAddress1" class="ng-binding">6 LAURIE COURT</span></td>
+                    <td class="text-primary"><label class="control-label">Next Appt :</label></td>
+                    <td><span data-ng-bind="pc.appointment" class="ng-binding"></span></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><span data-ng-bind="pc.secondFullAddress" class="ng-binding">HAMILTON SQ NJ 08690</span></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="text-primary"><label class="control-label">Billing Period :</label></td>
+                    <td><span data-ng-bind="pc.billingPeriod" class="ng-binding">10-01-2013 - 10-31-2016</span></td>
+                    <td class="text-red"><label class="control-label">Total Lifetime Balance :</label></td>
+                    <td class="text-red"><span ng-bind="pc.formatCurrency(pc.totalBalance)" class="ng-binding">($18.00)</span></td>
+                </tr>
+            </tbody>
+        </table>
+        <table class="table table-condensed">
+            <tbody>
+                <tr class="text-primary text-center">
+                    <td width="30%"><label class="control-label">Service</label></td>
+                    <td width="15%"><label class="control-label">Date</label></td>
+                    <td width="15%"><label class="control-label">Base Charge</label></td>
+                    <td width="10%"><label class="control-label">Sessions</label></td>
+                    <td width="10%"><label class="control-label">Discount</label></td>
+                    <td width="10%"><label class="control-label">Tax</label></td>
+                    <td width="10%"><label class="control-label">Total</label></td>
+                </tr>
+                <!-- ngRepeat: service in pc.billingPeriodServices --><tr ng-repeat="service in pc.billingPeriodServices" class="ng-scope">
+                    <td><span data-ng-bind="service.chargeName" class="ng-binding">acne laser</span></td>
+                    <td class="text-center"><span data-ng-bind="pc.formatDate(service.chargeDate)" class="ng-binding">10-30-2016</span></td>
+                    <td class="text-center"><span data-ng-bind="pc.formatCurrency(service.baseCharge)" class="ng-binding">$0.00</span></td>
+                    <td class="text-center"><span data-ng-bind="service.numberOfSessions" class="ng-binding">1</span></td>
+                    <td class="text-center"><span data-ng-bind="service.discount" class="ng-binding">0.0</span></td>
+                    <td class="text-center"><span data-ng-bind="pc.formatCurrency(service.tax)" class="ng-binding">$0.00</span></td>
+                    <td class="text-center"><span data-ng-bind="pc.formatCurrency(service.totalCharge)" class="ng-binding">$0.00</span></td>
+                </tr><!-- end ngRepeat: service in pc.billingPeriodServices --><tr ng-repeat="service in pc.billingPeriodServices" class="ng-scope">
+                    <td><span data-ng-bind="service.chargeName" class="ng-binding">Affirm and Obagi</span></td>
+                    <td class="text-center"><span data-ng-bind="pc.formatDate(service.chargeDate)" class="ng-binding">10-30-2016</span></td>
+                    <td class="text-center"><span data-ng-bind="pc.formatCurrency(service.baseCharge)" class="ng-binding">$0.00</span></td>
+                    <td class="text-center"><span data-ng-bind="service.numberOfSessions" class="ng-binding">1</span></td>
+                    <td class="text-center"><span data-ng-bind="service.discount" class="ng-binding">0.0</span></td>
+                    <td class="text-center"><span data-ng-bind="pc.formatCurrency(service.tax)" class="ng-binding">$0.00</span></td>
+                    <td class="text-center"><span data-ng-bind="pc.formatCurrency(service.totalCharge)" class="ng-binding">$0.00</span></td>
+                </tr><!-- end ngRepeat: service in pc.billingPeriodServices --><tr ng-repeat="service in pc.billingPeriodServices" class="ng-scope">
+                    <td><span data-ng-bind="service.chargeName" class="ng-binding">MDA with Hydrating Facial</span></td>
+                    <td class="text-center"><span data-ng-bind="pc.formatDate(service.chargeDate)" class="ng-binding">07-15-2015</span></td>
+                    <td class="text-center"><span data-ng-bind="pc.formatCurrency(service.baseCharge)" class="ng-binding">$155.00</span></td>
+                    <td class="text-center"><span data-ng-bind="service.numberOfSessions" class="ng-binding">3</span></td>
+                    <td class="text-center"><span data-ng-bind="service.discount" class="ng-binding">0.0</span></td>
+                    <td class="text-center"><span data-ng-bind="pc.formatCurrency(service.tax)" class="ng-binding">$0.00</span></td>
+                    <td class="text-center"><span data-ng-bind="pc.formatCurrency(service.totalCharge)" class="ng-binding">$155.00</span></td>
+                </tr><!-- end ngRepeat: service in pc.billingPeriodServices --><tr ng-repeat="service in pc.billingPeriodServices" class="ng-scope">
+                    <td><span data-ng-bind="service.chargeName" class="ng-binding">Radiesse</span></td>
+                    <td class="text-center"><span data-ng-bind="pc.formatDate(service.chargeDate)" class="ng-binding">09-20-2014</span></td>
+                    <td class="text-center"><span data-ng-bind="pc.formatCurrency(service.baseCharge)" class="ng-binding">$900.00</span></td>
+                    <td class="text-center"><span data-ng-bind="service.numberOfSessions" class="ng-binding">0</span></td>
+                    <td class="text-center"><span data-ng-bind="service.discount" class="ng-binding">0.0</span></td>
+                    <td class="text-center"><span data-ng-bind="pc.formatCurrency(service.tax)" class="ng-binding">$0.00</span></td>
+                    <td class="text-center"><span data-ng-bind="pc.formatCurrency(service.totalCharge)" class="ng-binding">$900.00</span></td>
+                </tr><!-- end ngRepeat: service in pc.billingPeriodServices -->
+            </tbody>
+        </table>
+        <table class="table table-condensed borderless">
+            <tbody>
+                <tr>
+                    <td width="50%"></td>
+                    <td width="50%" class="text-primary"><label class="control-label">Total Service $s During Billing Period : <span data-ng-bind="pc.formatCurrency(pc.billingPeriodServiceCharges)" class="ng-binding">$1,055.00</span></label></td>
+                </tr>
+        </tbody></table>
+        <table class="table table-condensed">
+            <tbody>
+                <tr class="text-primary text-center">
+                    <td width="30%"><label class="control-label">Product</label></td>
+                    <td width="15%"><label class="control-label">Date</label></td>
+                    <td width="15%"><label class="control-label">Base Charge</label></td>
+                    <td width="10%"><label class="control-label">Quantity</label></td>
+                    <td width="10%"><label class="control-label">Discount</label></td>
+                    <td width="10%"><label class="control-label">Tax</label></td>
+                    <td width="10%"><label class="control-label">Total</label></td>
+                </tr>
+                <!-- ngRepeat: product in pc.billingPeriodProducts -->
+            </tbody>
+        </table>
+        <table class="table table-condensed borderless">
+            <tbody>
+                <tr>
+                    <td width="50%"></td>
+                    <td width="50%" class="text-primary"><label class="control-label">Total Product $s During Billing Period : <span data-ng-bind="pc.formatCurrency(pc.billingPeriodProductCharges)" class="ng-binding">$0.00</span></label></td>
+                </tr>
+        </tbody></table>
+        <table class="table table-condensed">
+            <tbody>
+                <tr class="text-primary text-center">
+                    <td width="30%"><label class="control-label">Credit</label></td>
+                    <td width="15%"><label class="control-label">Date</label></td>
+                    <td width="40%"></td>
+                    <td width="15%"><label class="control-label">Amount</label></td>                    
+                </tr>
+                <!-- ngRepeat: payment in pc.billingPeriodPayments --><tr ng-repeat="payment in pc.billingPeriodPayments" class="ng-scope">
+                    <td><span data-ng-bind="payment.creditName" class="ng-binding">Discover</span></td>
+                    <td class="text-center"><span data-ng-bind="pc.formatDate(payment.creditDate)" class="ng-binding">07-15-2015</span></td>
+                    <td></td>
+                    <td class="text-center"><span data-ng-bind="pc.formatCurrency(payment.creditAmount)" class="ng-binding">$155.00</span></td>
+                </tr><!-- end ngRepeat: payment in pc.billingPeriodPayments --><tr ng-repeat="payment in pc.billingPeriodPayments" class="ng-scope">
+                    <td><span data-ng-bind="payment.creditName" class="ng-binding">GE Money</span></td>
+                    <td class="text-center"><span data-ng-bind="pc.formatDate(payment.creditDate)" class="ng-binding">09-20-2014</span></td>
+                    <td></td>
+                    <td class="text-center"><span data-ng-bind="pc.formatCurrency(payment.creditAmount)" class="ng-binding">$900.00</span></td>
+                </tr><!-- end ngRepeat: payment in pc.billingPeriodPayments -->
+            </tbody>
+        </table>
+        <table class="table table-condensed borderless">
+            <tbody>
+                <tr>
+                    <td width="50%"></td>
+                    <td width="50%" class="text-primary"><label class="control-label">Total Payments During Billing Period : <span data-ng-bind="pc.formatCurrency(pc.billingPeriodPaymentDone)" class="ng-binding">$1,055.00</span></label></td>
+                </tr>
+        </tbody></table>
+        <hr>
+        <table class="table table-condensed borderless">
+            <tbody>
+                <tr>
+                    <td width="30%"><label class="control-label text-primary">Totals For Billing Period</label></td>
+                    <td width="10%"></td>
+                    <td width="60%"><span data-ng-bind="pc.billingPeriod" class="ng-binding">10-01-2013 - 10-31-2016</span></td>
+                </tr>
+        </tbody></table>
+        <table class="table table-condensed borderless">
+            <tbody>
+                <tr>
+                    <td width="31%" class="text-primary text-center"><label class="control-label">Charges : <span data-ng-bind="pc.formatCurrency(pc.billingPeriodTotalCharges)" class="ng-binding">$1,055.00</span></label></td>
+                    <td width="2%" class="text-primary text-center"><label class="control-label">-</label></td>
+                    <td width="31%" class="text-success text-center"><label class="control-label">Payments : <span data-ng-bind="pc.formatCurrency(pc.billingPeriodPaymentDone)" class="ng-binding">$1,055.00</span></label></td>
+                    <td width="2%" class="text-primary text-center"><label class="control-label">=</label></td>
+                    <td width="31%" class="text-red text-center"><label class="control-label">Balance : <span data-ng-bind="pc.formatCurrency(pc.billingPeriodBalance)" class="ng-binding">$0.00</span></label></td>
+                </tr>
+        </tbody></table>
+        <hr>
+    </div></body></html>

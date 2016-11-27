@@ -2,6 +2,8 @@ package com.billingapp.rest.model;
 
 import java.util.List;
 
+import javax.persistence.Column;
+
 import org.codehaus.jackson.annotate.JsonAutoDetect;
 import org.codehaus.jackson.annotate.JsonAutoDetect.Visibility;
 import org.codehaus.jackson.annotate.JsonIgnoreProperties;
@@ -54,6 +56,12 @@ public class PatientProcedure {
 	private boolean MidFaceLeft;
 	@JsonProperty("Face")
 	private boolean Face;
+	@JsonProperty("Bikiniline")
+	private boolean Bikiniline;
+	@JsonProperty("Underarms")
+	private boolean Underarms;
+	@JsonProperty("Ears")
+	private boolean Ears;
 	@JsonProperty("UpperLip")
 	private boolean UpperLip;
 	@JsonProperty("Bikini")
@@ -1886,5 +1894,31 @@ public class PatientProcedure {
 	public void setProcedureAreas(List<ProcedureAreas> procedureAreas) {
 		this.procedureAreas = procedureAreas;
 	}
+
+	public boolean isBikiniline() {
+		return Bikiniline;
+	}
+
+	public void setBikiniline(boolean bikiniline) {
+		Bikiniline = bikiniline;
+	}
+
+	public boolean isUnderarms() {
+		return Underarms;
+	}
+
+	public void setUnderarms(boolean underarms) {
+		Underarms = underarms;
+	}
+
+	public boolean isEars() {
+		return Ears;
+	}
+
+	public void setEars(boolean ears) {
+		Ears = ears;
+	}
+	
+	
 
 }

@@ -1,4 +1,13 @@
-﻿<div class="modal-header">
+﻿<script type="text/javascript">
+$(document).ready(function () {
+	$('input').keyup(function (e) {
+	if (e.which == 39) $(this).closest('td').next().find('input').focus();
+	else if (e.which == 37) $(this).closest('td').prev().find('input').focus();
+	else if (e.which == 40) $(this).closest('tr').next().find('td:eq(' + $(this).closest('td').index() + ')').find('input').focus();
+	else if (e.which == 38) $(this).closest('tr').prev().find('td:eq(' + $(this).closest('td').index() + ')').find('input').focus(); }); });
+</script>
+
+<div class="modal-header">
     <h3>Services Billing</h3>
 </div>
 <div class="modal-body">

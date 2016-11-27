@@ -581,6 +581,10 @@
 
         $scope.pc.deleteProcedure = function (dataItem) {
             var modalInstance;
+            
+            if(dataItem.hasOwnProperty('PatientProcedureId')){
+            	dataItem.patientProcedureId = dataItem.PatientProcedureId;
+            }
 
             modalInstance = $modal.open({
                 templateUrl: "views/modal/confirmmodalwindow.html",
@@ -591,7 +595,37 @@
                 $scope.promise.success(function (data) {
                     if (data == 'true') {
                         $scope.pc.patientDetails.patientProcedures.remove(dataItem);
+                        bindSelectedPatient(dataItem.patientProcedureId);
+                        LoggerService.logSuccess("Procedure deleted successfully.");
+                    }
+                    else {
+                        LoggerService.logError("Procedure deletion failed.");
+                    }
+                }).error(processErrors);
+            });
+        }
+        
+        $scope.pc.deleteProcedureFromView = function (dataItem) {
+            var modalInstance;
 
+            modalInstance = $modal.open({
+                templateUrl: "views/modal/confirmmodalwindow.html",
+                controller: 'ConfirmModalInstanceController'
+            }), modalInstance.result.then(function () {
+                $scope.promise = PatientService.deleteProcedure(dataItem.PatientProcedureId);
+
+                $scope.promise.success(function (data) {
+                    if (data == 'true') {
+                    	var dataToBeRemoved = '';
+
+                        $scope.pc.patientDetails.patientProcedures.forEach(function (procedure) {
+                            if (procedure.patientProcedureId == dataItem.PatientProcedureId) {
+                                dataToBeRemoved = procedure;
+                            }
+                        });
+
+                        $scope.pc.patientDetails.patientProcedures.splice($scope.pc.patientDetails.patientProcedures.indexOf(dataToBeRemoved), 1);
+                        bindSelectedPatient(dataItem.PatientProcedureId);
                         LoggerService.logSuccess("Procedure deleted successfully.");
                     }
                     else {
